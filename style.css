@@ -25,6 +25,10 @@ Domain Path: /languages/
 	display: none;
 }
 
+table th {
+	text-align: left;
+}
+
 /* Specifics for entries: 
  * - Header
  * - Smaller text in details
@@ -32,6 +36,7 @@ Domain Path: /languages/
  */
 .entry-details {
 	font-size: 14px;
+	background-color: #efefef;
 }
 
 .entry-details .entry-details-header {

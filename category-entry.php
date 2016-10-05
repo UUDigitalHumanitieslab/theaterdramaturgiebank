@@ -11,12 +11,23 @@ get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>
 
-		<div class="facetwp-template">
-		<?php while (have_posts()) : the_post(); ?>
+		<div class="facetwp-template"> <!-- Allows facets to be displayed -->
+			<table id="entries" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Auteur(s)</th>
+						<th>Titel</th>
+						<th>Jaar</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php while (have_posts()) : the_post(); ?>
 
-			<?php get_template_part( 'parts/post-loop'); ?> 
+						<?php get_template_part( 'parts/entry-loop'); ?> 
 
-		<?php endwhile; ?>
+					<?php endwhile; ?>
+				</tbody>
+			</table>
 		</div>
 
 			<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
@@ -27,6 +38,6 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-<?php get_template_part( 'parts/page-footer-2col'); ?> 
+<?php get_template_part( 'parts/page-footer-2col'); ?>
 
 <?php get_footer();

@@ -23,14 +23,16 @@ get_header(); ?>
 				<tbody>
 					<?php while (have_posts()) : the_post(); ?>
 
-						<?php get_template_part( 'parts/entry-loop'); ?> 
+						<?php get_template_part('parts/entry-loop'); ?> 
 
 					<?php endwhile; ?>
 				</tbody>
 			</table>
 		</div>
 
-			<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
+		<div id="entries_pager">
+			<?php echo facetwp_display('pager'); // FacetWP pager/pagination ?>
+		</div>
 
 	<?php else : ?>
 

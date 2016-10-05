@@ -25,12 +25,13 @@ Domain Path: /languages/
 	display: none;
 }
 
+/* Showing the table labels on the left by default */
 table th {
 	text-align: left;
 }
 
 /* Specifics for entries: 
- * - Header
+ * - Underlined headers in details
  * - Smaller text in details
  * - 
  */
@@ -47,4 +48,30 @@ table th {
 
 .entry-details .entry-details-content {
 	line-height: 20px;
+}
+
+/* Mimicking the UU-pager behavior:
+ * - Display pagination as blocks
+ * - Active page is yellow
+ * - Don't display number of pages
+ */
+#entries_pager .facetwp-page {
+	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+	background: #efefef;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	font-size: 15px;
+	color: black;
+	text-decoration: none;
+	margin: 0 5px;
+}
+
+#entries_pager .facetwp-page.active {
+	background-color: #ffcd00;
+}
+
+#entries_pager .facetwp-pager-label {
+	display: none;
 }

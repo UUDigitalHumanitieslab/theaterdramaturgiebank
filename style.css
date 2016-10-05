@@ -10,3 +10,36 @@ Text Domain: uu2014
 Domain Path: /languages/
 
 */
+
+/* Move the blog name up a bit, and set the correct color */
+.blog-name {
+	margin-top: -10px;
+}
+
+.blog-name a {
+	color: #C00A35;
+}
+
+/* Removing the header image and page title */
+#content .header-image, .page-title {
+	display: none;
+}
+
+/* Specifics for entries: 
+ * - Header
+ * - Smaller text in details
+ * - 
+ */
+.entry-details {
+	font-size: 14px;
+}
+
+.entry-details .entry-details-header {
+	margin-top: 1em;
+	border-bottom: 1px solid #C00A35;
+	text-decoration: none;
+}
+
+.entry-details .entry-details-content {
+	line-height: 20px;
+}

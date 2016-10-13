@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-sm-2 col-xs-8 logodiv">
+			<div class="col-sm-4 col-xs-8 logodiv">
 				<button type="button" class="navbar-toggle hidden-print" data-toggle="collapse" data-target="#main-menu-collapse">
                     <span class="sr-only">Navigation</span>
                     <span class="icon-bar"></span>
@@ -40,45 +40,15 @@
 		</div>	
 			</div>
 
-		<div class="col-sm-5 col-xs-8 blog-name">
+			<!-- TDB: Add the blog name to the header, but remove the search functionality !-->
+
+		<div class="col-sm-8 col-xs-8 blog-name">
 			<h1>
 				<a href="<?php  echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>">
 					<?php bloginfo('name'); ?>
 				</a>
 			</h1>
 		</div>
-
-<?php if ( function_exists('icl_object_id') ) :  //check if WPML is activated ?> 
-			<div class="col-md-3 col-sm-5 col-xs-2 hidden-print" role="search">
-				<div class="brandbar-search">
-					
-						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
-							<label class="screen-reader-text" for="s"><?php __('Search for:', 'uu2014'); ?>'</label>
-							<input type="text" class= "searchfield" value="<?php get_search_query() ?>" name="s" id="s" placeholder="<?php _e('Search the Site...','uu2014'); ?>" />
-							<input type="submit" id="searchsubmit" class="searchbutton" value="" />
-						</form>
-					
-				</div>
-			</div>
-			<div class="col-md-3 col-sm-3 col-xs-2 hidden-print">
-				<div class="language-switch"><?php icl_language_link(); ?></div>
-			</div>
-		<?php else : ?>
-			<div class="col-sm-3 col-xs-4 hidden-print" role="search" >
-				
-					<div class="pull-right">
-						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
-							<div class="search-wrapper">
-								<label class="screen-reader-text" for="s"><?php __('Search for:', 'uu2014'); ?>'</label>
-								<input type="text" class= "searchfield" value="<?php get_search_query() ?>" name="s" id="s" placeholder="<?php _e('Search the Site...','uu2014'); ?>" />
-								<input type="submit" id="searchsubmit" class="searchbutton" value="" />
-							</div>
-							
-						</form>
-					</div>
-				
-			</div>		
-		<?php endif; ?>	
 		</div>
 	</div>
 </div>

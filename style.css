@@ -75,3 +75,28 @@ table th {
 #entries_pager .facetwp-pager-label {
 	display: none;
 }
+
+/* Mimicking the UU-search behavior, but:
+ * - No fixed position, relative instead
+ */
+#home_search .searchfield {
+	background: none repeat scroll 0 0 #efefef;
+    border: 0 none;
+    font-size: 14px;
+    height: 30px;
+    outline: medium none;
+    padding-left: 10px;
+    padding-right: 40px;
+    color: #3b3b3b;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+#home_search .searchbutton {
+	position: relative;
+	left: -30px;
+}
+
+#home_search a {
+	text-decoration: underline;
+}

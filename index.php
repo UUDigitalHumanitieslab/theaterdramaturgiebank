@@ -2,58 +2,31 @@
 
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 	<div class="home-blog">
+		<p class="lead">
+			Welkom bij de TheaterDramaturgie.Bank!
+		</p>
 		<div class="row">
 			
-		<!-- We use the default "news" and "agenda" posts and settings for "recently added" and "recommended" posts respectively, 
-			so that settings are modifiable from the administration and stay more or less in line with the defaults. -->
-			<div class="col-sm-6">
-				<h2><?php if(get_field('uu_options_alternative_title_news', 'option')) { the_field('uu_options_alternative_title_news', 'option'); } else { _e('News', 'uu2014'); } ?></h2>
-
-				<?php 
-					$newsamount = get_field('uu_options_news_amount', 'option');
-					$newscats = get_field('uu_options_news_frontpage_cat', 'option');
-					if ($newscats) { 
-						$terms = implode(', ', $newscats);	
-					} else {
-						$terms='';
-					}
-				
-					$args = array(
-						'post_type'	 			=> 'post',
-						'pagination'    		=> true,
-						'posts_per_page' 		=> $newsamount,
-						'cat' 					=> $terms,
-						'ignore_sticky_posts'   => false,
-					);
-					the_field('uu_options_alternative_title_news');
-					$newsquery = new WP_Query( $args );
-					if ( $newsquery->have_posts() ) {
-							while ( $newsquery->have_posts() ) {
-									$newsquery->the_post(); 
-					
-					get_template_part( 'parts/post-loop'); ?> 
-					<hr />
-				
-
-				<?php } } else { ?>
-
-				<?php get_template_part('includes/template','error'); // WordPress template error message ?>
-
-				<?php } ?>
-				
+			<div id="home_search" class="col-sm-6">
+				<h2>Zoeken in de database</h2>
+				Je kunt zoeken in de database met onderstaand zoekveld, of je kunt <a href="category/entry/">starten met een lege zoekvraag</a>.
+				<form method="get" action="category/entry/">
+				<input type="text" name="fwp_search" placeholder="Doorzoek de database" class="searchfield">
+				<input type="submit" id="searchsubmit" class="searchbutton" value="">
+				</form>
 			</div>
 
 			<div class="col-sm-6">
-				<h2><?php if(get_field('uu_options_alternative_title_agenda', 'option')) { the_field('uu_options_alternative_title_agenda', 'option'); } else { _e('Agenda', 'uu2014'); } ?></h2>
+				<h2>Willekeurige entry</h2>
 
 				<div class="agenda-archive">
 					<?php 
 
-					// Show 3 random entries from the archive
+					// Show 1 random entry from the archive
 					$args2 = array(
 						'post_type'				=> 'post',
 						'category_name' 		=> 'entry',
-						'posts_per_page'		=> 3,
+						'posts_per_page'		=> 1,
 						'orderby' 				=> 'rand',
 					);
 

@@ -8,7 +8,7 @@
 		
 			<section class="entry-content clearfix" itemprop="articleBody">
 				<div class="row">
-					<div class="col-sm-10">
+					<div class="col-sm-9">
 						<p class="entry-author"><?php echo get_field('author'); ?></p>
 						<h1 class="entry-title">
 							<?php the_title(); ?>
@@ -16,15 +16,15 @@
 						<em><?php echo get_field('date'); ?> &bull; <?php echo get_field('date'); ?></em>
 						<p class="entry-content"><?php the_content(); ?></p>
 					</div>
-					<div class="col-sm-2 entry-details">
+					<div class="col-sm-3 entry">
 						<?php
 							// Display the ACF-fields with a link back to the search page
 							foreach (get_field_objects() as $title => $field)
 							{
 								if ($field['value'])
 								{
-									echo '<a class="entry-details-header">' . $field['label'] . '</a>';
-									echo '<p class="entry-details-content">';
+									echo '<a class="entry-header">' . $field['label'] . '</a>';
+									echo '<p class="entry-content">';
 
 									// TODO: make this more generic
 									if ($field['label'] === 'Year')
@@ -42,8 +42,8 @@
 							}
 
 							// Display the tags with a link back to the search page
-							echo '<a class="entry-details-header">Keywords</a>';
-							echo '<p class="entry-details-content">';
+							echo '<a class="entry-header">Keywords</a>';
+							echo '<p class="entry-content">';
 							foreach (get_the_tags() as $tag)
 							{
 								$link = '/category/entry/?fwp_tags=' . $tag->slug;

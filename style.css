@@ -35,18 +35,18 @@ table th {
  * - Smaller text in details
  * - 
  */
-.entry-details {
+.entry {
 	font-size: 14px;
 	background-color: #efefef;
 }
 
-.entry-details .entry-details-header {
+.entry .entry-header {
 	margin-top: 1em;
 	border-bottom: 1px solid #C00A35;
 	text-decoration: none;
 }
 
-.entry-details .entry-details-content {
+.entry .entry-content {
 	line-height: 20px;
 }
 
@@ -99,4 +99,11 @@ table th {
 
 #home_search a {
 	text-decoration: underline;
+}
+
+/**
+ * Smaller font size for facets
+ */ 
+.facetwp-facet {
+	font-size: 14px;
 }

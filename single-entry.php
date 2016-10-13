@@ -17,18 +17,40 @@
 						<p class="entry-content"><?php the_content(); ?></p>
 					</div>
 					<div class="col-sm-2 entry-details">
-						<?php 
+						<?php
+							// Display the ACF-fields with a link back to the search page
 							foreach (get_field_objects() as $title => $field)
 							{
 								if ($field['value'])
 								{
 									echo '<a class="entry-details-header">' . $field['label'] . '</a>';
-									echo '<p class="entry-details-content">' . $field['value'] . '</p>';
+									echo '<p class="entry-details-content">';
+
+									// TODO: make this more generic
+									if ($field['label'] === 'Year')
+									{
+										$link = '/category/entry/?fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
+										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
+									}
+									else
+									{
+										echo $field['value'];
+									}
+									
+									echo '</p>';
 								}
 							}
+
+							// Display the tags with a link back to the search page
+							echo '<a class="entry-details-header">Keywords</a>';
+							echo '<p class="entry-details-content">';
+							foreach (get_the_tags() as $tag)
+							{
+								$link = '/category/entry/?fwp_tags=' . $tag->slug;
+								echo '<a href="' . $link . '">' . $tag->name . '</a></br>';
+							}
+							echo '</p>';
 						?>
-						<a class="entry-details-header">Keywords</a>
-						<p class="entry-details-content"><?php the_tags('', ', '); ?></p>
 					</div>
 				</div>
 				

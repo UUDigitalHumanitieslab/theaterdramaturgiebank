@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The template for displaying a list of posts with the 'Entry' category.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  */
@@ -25,9 +25,7 @@ get_header(); ?>
 						</thead>
 						<tbody>
 							<?php while (have_posts()) : the_post(); ?>
-
 								<?php get_template_part('parts/entry-loop'); ?> 
-
 							<?php endwhile; ?>
 						</tbody>
 					</table>
@@ -37,7 +35,7 @@ get_header(); ?>
 					<?php echo facetwp_display('pager'); // FacetWP pager/pagination ?>
 				</div>
 			</div>
-			<div class="col-sm-3 entry">
+			<div class="col-sm-3 entry-sidebar">
 				<h2>Filters</h2>
 				<a class="entry-header">Auteur</a>
 				<?php echo facetwp_display( 'facet', 'author' ); ?>
@@ -49,9 +47,7 @@ get_header(); ?>
 				<?php echo facetwp_display( 'facet', 'tags' ); ?>
 				<a class="entry-header">Zoek</a>
 				<?php echo facetwp_display( 'facet', 'search' ); ?>
-
 			</div>
-
 		</div>
 
 	<?php else : ?>

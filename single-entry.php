@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The template for displaying a single post with the 'Entry' category.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ */
+
+get_header(); ?>
 
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 
@@ -8,15 +15,21 @@
 		
 			<section class="entry-content clearfix" itemprop="articleBody">
 				<div class="row">
-					<div class="col-sm-9">
-						<p class="entry-author"><?php echo get_field('author'); ?></p>
+					<div class="col-sm-9 entry-main">
+						<p class="entry-author">
+							<?php echo get_field('author'); ?>
+						</p>
 						<h1 class="entry-title">
 							<?php the_title(); ?>
 						</h1>
-						<em><?php echo get_field('date'); ?> &bull; <?php echo get_field('date'); ?></em>
-						<p class="entry-content"><?php the_content(); ?></p>
+						<em>
+							<?php echo get_field('date'); ?> &bull; <?php echo get_field('city'); ?>
+						</em>
+						<p class="entry-content">
+							<?php the_content(); ?>
+						</p>
 					</div>
-					<div class="col-sm-3 entry">
+					<div class="col-sm-3 entry-sidebar">
 						<?php
 							// Display the ACF-fields with a link back to the search page
 							$fields = get_field_objects();

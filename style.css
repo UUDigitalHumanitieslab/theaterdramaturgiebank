@@ -1,14 +1,13 @@
 /*
 Theme Name: TheaterDramaturgie.Bank
-Theme URI: 
-Author: ICT&Media
-Author URI: http://www.uu.nl/ictenmedia
+Theme URI: https://github.com/UUDigitalHumanitieslab/theaterdramaturgiebank
+Author: Martijn van der Klis, Digital Humanities lab
+Author URI: http://dig.hum.uu.nl/
 Description: uu2014 childtheme for theaterdramaturgiebank.sites.uu.nl
 template: UU2014
 Version: 1.0-wpcom
 Text Domain: uu2014
 Domain Path: /languages/
-
 */
 
 /* Move the blog name up a bit, and set the correct color */
@@ -30,24 +29,31 @@ table th {
 	text-align: left;
 }
 
-/* Specifics for entries: 
+/* Specifics for entry main content: 
+ * - Smaller margins for title
+ */
+
+.entry-main .entry-title {
+	margin: .5em 0 .5em 0;
+}
+
+/* Specifics for entry sidebar: 
  * - Underlined headers in details
  * - Smaller text in details
- * - 
  */
-.entry {
+.entry-sidebar {
 	font-size: 14px;
 	background-color: #efefef;
 }
 
-.entry .entry-header {
+.entry-sidebar .entry-header {
 	margin-top: 1em;
 	border-bottom: 1px solid #C00A35;
 	text-decoration: none;
 	font-weight: bold;
 }
 
-.entry .entry-content {
+.entry-sidebar .entry-content {
 	line-height: 20px;
 }
 

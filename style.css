@@ -107,3 +107,12 @@ table th {
 .facetwp-facet {
 	font-size: 14px;
 }
+
+/**
+ * Smaller inputs for number range facets
+ */
+
+.facetwp-type-number_range input {
+	width: 70px;
+	margin: 0px 5px 0px 10px;
+}

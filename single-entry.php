@@ -19,7 +19,9 @@
 					<div class="col-sm-3 entry">
 						<?php
 							// Display the ACF-fields with a link back to the search page
-							foreach (get_field_objects() as $title => $field)
+							$fields = get_field_objects();
+							ksort($fields);
+							foreach ($fields as $title => $field)
 							{
 								if ($field['value'])
 								{
@@ -30,6 +32,11 @@
 									if ($field['label'] === 'Year')
 									{
 										$link = '/category/entry/?fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
+										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
+									}
+									else if ($field['label'] === 'City')
+									{
+										$link = '/category/entry/?fwp_' . 'cities' . '=' . sanitize_title_with_dashes($field['value']);
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
 									else

@@ -41,6 +41,8 @@ get_header(); ?>
 				<h2>Filters</h2>
 				<a class="entry-header">Auteur</a>
 				<?php echo facetwp_display( 'facet', 'author' ); ?>
+				<a class="entry-header">Plaats van publicatie</a>
+				<?php echo facetwp_display( 'facet', 'cities' ); ?>
 				<a class="entry-header">Jaar</a>
 				<?php echo facetwp_display( 'facet', 'year' ); ?>
 				<a class="entry-header">Keywords</a>

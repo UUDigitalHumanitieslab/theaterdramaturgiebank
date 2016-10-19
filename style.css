@@ -44,6 +44,7 @@ table th {
 	margin-top: 1em;
 	border-bottom: 1px solid #C00A35;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 .entry .entry-content {
@@ -102,16 +103,16 @@ table th {
 }
 
 /**
- * Smaller font size for facets
+ * Smaller font size for facets, and less margin
  */ 
 .facetwp-facet {
 	font-size: 14px;
+	margin-bottom: 20px !important;
 }
 
 /**
  * Smaller inputs for number range facets
  */
-
 .facetwp-type-number_range input {
 	width: 70px;
 	margin: 0px 5px 0px 10px;

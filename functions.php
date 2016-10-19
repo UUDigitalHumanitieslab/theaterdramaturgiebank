@@ -1,7 +1,6 @@
 <?php
 
-//enqueue parent css
-
+// Adds a child theme CSS file
 add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_style', 30 );
 
 function enqueue_child_theme_style() {
@@ -9,17 +8,8 @@ function enqueue_child_theme_style() {
     wp_enqueue_style( 'theaterdramaturgiebank' );
 }
 
+// Loads specific translations for this child theme
 load_theme_textdomain( 'uu2014-theaterdramaturgiebank', get_stylesheet_directory() . '/languages' );
-
-// hide ACF for site users
-
-add_filter('acf/settings/show_admin', 'my_acf_show_admin');
-
-function my_acf_show_admin( $show ) {
-    
-    return current_user_can('manage_network');
-
-}
 
 // Gets post cat slug and looks for single-[cat slug].php and applies it
 // Found on: https://wordpress.org/support/topic/how-to-change-single-post-template-based-on-category

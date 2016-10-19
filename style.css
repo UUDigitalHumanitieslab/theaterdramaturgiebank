@@ -62,6 +62,11 @@ table th {
  * - Active page is yellow
  * - Don't display number of pages
  */
+#entries_pager {
+	text-align: center;
+	border-top: 1px solid #efefef;
+}
+
 #entries_pager .facetwp-page {
 	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
 	background: #efefef;
@@ -73,10 +78,16 @@ table th {
 	color: black;
 	text-decoration: none;
 	margin: 0 5px;
+	text-align: center;
 }
 
 #entries_pager .facetwp-page.active {
 	background-color: #ffcd00;
+}
+
+#entries_pager .facetwp-page.first-page, #entries_pager .facetwp-page.last-page {
+	background-color: black;
+	color: white;
 }
 
 #entries_pager .facetwp-pager-label {

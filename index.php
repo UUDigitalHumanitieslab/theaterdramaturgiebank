@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The template for displaying the home page content.
+ *
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ */
+
+get_header(); ?>
 
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 	<div class="home-blog">
@@ -9,10 +16,13 @@
 			
 			<div id="home_search" class="col-sm-6">
 				<h2>Zoeken in de database</h2>
-				Je kunt zoeken in de database met onderstaand zoekveld, of je kunt <a href="category/entry/">starten met een lege zoekvraag</a>.
+				<p>
+					Je kunt zoeken in de database met onderstaand zoekveld,
+					of je kunt <a href="category/entry/">starten met een lege zoekvraag</a>.
+				</p>
 				<form method="get" action="category/entry/">
-				<input type="text" name="fwp_search" placeholder="Doorzoek de database" class="searchfield">
-				<input type="submit" id="searchsubmit" class="searchbutton" value="">
+					<input type="text" name="fwp_search" placeholder="Doorzoek de database" class="searchfield">
+					<input type="submit" id="searchsubmit" class="searchbutton" value="">
 				</form>
 			</div>
 
@@ -23,25 +33,23 @@
 					<?php 
 
 					// Show 1 random entry from the archive
-					$args2 = array(
+					$q = array(
 						'post_type'				=> 'post',
 						'category_name' 		=> 'entry',
 						'posts_per_page'		=> 1,
 						'orderby' 				=> 'rand',
 					);
 
-					$agenda_query = new WP_Query( $args2 );
+					$query = new WP_Query($q);
 
-						if ( $agenda_query->have_posts() ) : ?>
+						if ( $query->have_posts() ) : ?>
 
-							<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
+							<?php while ($query->have_posts()) : $query->the_post(); ?>
 
 								<?php get_template_part( 'parts/post-loop'); ?>
 								<hr />
 
 							<?php endwhile; ?>
-
-								
 
 						<?php else : ?>
 						<div class="no-events">

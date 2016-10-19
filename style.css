@@ -10,7 +10,9 @@ Text Domain: uu2014
 Domain Path: /languages/
 */
 
-/* Move the blog name up a bit, and set the correct color */
+/**
+ * Move the blog name up a bit, and set the correct color
+ */
 .blog-name {
 	margin-top: -10px;
 }
@@ -19,25 +21,30 @@ Domain Path: /languages/
 	color: #C00A35;
 }
 
-/* Removing the header image and page title */
+/**
+ * Removing the header image and page title
+ */
 #content .header-image, .page-title {
 	display: none;
 }
 
-/* Showing the table labels on the left by default */
+/**
+ * Showing the table labels on the left by default 
+ */
 table th {
 	text-align: left;
 }
 
-/* Specifics for entry main content: 
+/**
+ * Specifics for entry main content: 
  * - Smaller margins for title
  */
-
 .entry-main .entry-title {
 	margin: .5em 0 .5em 0;
 }
 
-/* Specifics for entry sidebar: 
+/**
+ * Specifics for entry sidebar: 
  * - Underlined headers in details
  * - Smaller text in details
  */
@@ -57,7 +64,8 @@ table th {
 	line-height: 20px;
 }
 
-/* Mimicking the UU-pager behavior:
+/**
+ * Mimicking the UU-pager behavior:
  * - Display pagination as blocks
  * - Active page is yellow
  * - Don't display number of pages
@@ -94,7 +102,8 @@ table th {
 	display: none;
 }
 
-/* Mimicking the UU-search behavior, but:
+/**
+ * Mimicking the UU-search behavior, but:
  * - No fixed position, relative instead
  */
 #home_search .searchfield {

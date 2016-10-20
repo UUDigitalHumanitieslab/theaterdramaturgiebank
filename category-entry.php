@@ -14,13 +14,12 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-sm-9">
 				<div class="facetwp-template"> <!-- Allows facets to be displayed -->
-					<h2>Gevonden resultaten</h2>
 					<table id="entries" class="table table-striped">
 						<thead>
 							<tr>
-								<th>Auteur(s)</th>
-								<th>Titel</th>
-								<th>Jaar</th>
+								<th>Author(s)</th>
+								<th>Title</th>
+								<th>Year</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -36,16 +35,15 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="col-sm-3 entry-sidebar">
-				<h2>Filters</h2>
-				<a class="entry-header">Auteur</a>
+				<a class="entry-header">Author</a>
 				<?php echo facetwp_display( 'facet', 'author' ); ?>
-				<a class="entry-header">Plaats van publicatie</a>
+				<a class="entry-header">Place of publication</a>
 				<?php echo facetwp_display( 'facet', 'cities' ); ?>
-				<a class="entry-header">Jaar</a>
+				<a class="entry-header">Year</a>
 				<?php echo facetwp_display( 'facet', 'year' ); ?>
 				<a class="entry-header">Keywords</a>
 				<?php echo facetwp_display( 'facet', 'tags' ); ?>
-				<a class="entry-header">Zoek</a>
+				<a class="entry-header">Search</a>
 				<?php echo facetwp_display( 'facet', 'search' ); ?>
 			</div>
 		</div>

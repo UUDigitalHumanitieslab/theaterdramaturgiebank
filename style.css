@@ -108,15 +108,15 @@ table th {
  */
 #home_search .searchfield {
 	background: none repeat scroll 0 0 #efefef;
-    border: 0 none;
-    font-size: 14px;
-    height: 30px;
-    outline: medium none;
-    padding-left: 10px;
-    padding-right: 40px;
-    color: #3b3b3b;
-    text-decoration: none;
-    line-height: 30px;
+	border: 0 none;
+	font-size: 14px;
+	height: 30px;
+	outline: medium none;
+	padding-left: 10px;
+	padding-right: 40px;
+	color: #3b3b3b;
+	text-decoration: none;
+	line-height: 30px;
 }
 
 #home_search .searchbutton {
@@ -142,4 +142,11 @@ table th {
 .facetwp-type-number_range input {
 	width: 70px;
 	margin: 0px 5px 0px 10px;
+}
+
+/**
+ * Move dh-lab image a bit upwards
+ */
+#dhlab_image {
+	margin-top: .5em;
 }

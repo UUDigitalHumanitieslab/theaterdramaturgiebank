@@ -16,9 +16,6 @@ get_header(); ?>
 			<section class="entry-content clearfix" itemprop="articleBody">
 				<div class="row">
 					<div class="col-sm-9 entry-main">
-						<p class="entry-author">
-							<?php echo get_field('author'); ?>
-						</p>
 						<h1 class="entry-title">
 							<?php the_title(); ?>
 						</h1>

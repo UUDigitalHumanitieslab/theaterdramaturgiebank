@@ -44,9 +44,10 @@ get_header(); ?>
 										$link = '/category/record/?fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
-									else if ($field['label'] === 'City')
+									else if (in_array($field['label'], array('Collection', 'City', 'Journal', 'Type')))
 									{
-										$link = '/category/record/?fwp_' . 'cities' . '=' . sanitize_title_with_dashes($field['value']);
+										$link = '/category/record/?fwp_' . strtolower($field['label']); 
+										$link .= '=' . sanitize_title_with_dashes($field['value']);  // TODO: does not work for items with a '.'
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
 									else

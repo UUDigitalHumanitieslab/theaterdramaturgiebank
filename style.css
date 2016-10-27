@@ -36,31 +36,31 @@ table th {
 }
 
 /**
- * Specifics for entry main content: 
+ * Specifics for record main content: 
  * - Smaller margins for title
  */
-.entry-main .entry-title {
+.record-main .record-title {
 	margin: .5em 0 .5em 0;
 }
 
 /**
- * Specifics for entry sidebar: 
+ * Specifics for record sidebar: 
  * - Underlined headers in details
  * - Smaller text in details
  */
-.entry-sidebar {
+.record-sidebar {
 	font-size: 14px;
 	background-color: #efefef;
 }
 
-.entry-sidebar .entry-header {
+.record-sidebar .record-header {
 	margin-top: 1em;
 	border-bottom: 1px solid #C00A35;
 	text-decoration: none;
 	font-weight: bold;
 }
 
-.entry-sidebar .entry-content {
+.record-sidebar .record-content {
 	line-height: 20px;
 }
 
@@ -70,12 +70,12 @@ table th {
  * - Active page is yellow
  * - Don't display number of pages
  */
-#entries_pager {
+#records_pager {
 	text-align: center;
 	border-top: 1px solid #efefef;
 }
 
-#entries_pager .facetwp-page {
+#records_pager .facetwp-page {
 	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
 	background: #efefef;
 	display: inline-block;
@@ -89,16 +89,16 @@ table th {
 	text-align: center;
 }
 
-#entries_pager .facetwp-page.active {
+#records_pager .facetwp-page.active {
 	background-color: #ffcd00;
 }
 
-#entries_pager .facetwp-page.first-page, #entries_pager .facetwp-page.last-page {
+#records_pager .facetwp-page.first-page, #records_pager .facetwp-page.last-page {
 	background-color: black;
 	color: white;
 }
 
-#entries_pager .facetwp-pager-label {
+#records_pager .facetwp-pager-label {
 	display: none;
 }
 

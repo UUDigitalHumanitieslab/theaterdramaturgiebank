@@ -18,24 +18,24 @@ get_header(); ?>
 				<h2>Zoeken in de database</h2>
 				<p>
 					Je kunt zoeken in de database met onderstaand zoekveld,
-					of je kunt <a href="category/entry/">starten met een lege zoekvraag</a>.
+					of je kunt <a href="category/record/">starten met een lege zoekvraag</a>.
 				</p>
-				<form method="get" action="category/entry/">
+				<form method="get" action="category/record/">
 					<input type="text" name="fwp_search" placeholder="Doorzoek de database" class="searchfield">
 					<input type="submit" id="searchsubmit" class="searchbutton" value="">
 				</form>
 			</div>
 
 			<div class="col-sm-6">
-				<h2>Willekeurige entry</h2>
+				<h2>Willekeurige record</h2>
 
 				<div class="agenda-archive">
 					<?php 
 
-					// Show 1 random entry from the archive
+					// Show 1 random record from the archive
 					$q = array(
 						'post_type'				=> 'post',
-						'category_name' 		=> 'entry',
+						'category_name' 		=> 'record',
 						'posts_per_page'		=> 1,
 						'orderby' 				=> 'rand',
 					);

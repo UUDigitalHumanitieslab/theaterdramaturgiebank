@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying a list of posts with the 'Entry' category.
+ * The template for displaying a list of posts with the 'record' category.
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  */
@@ -14,7 +14,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-sm-9">
 				<div class="facetwp-template"> <!-- Allows facets to be displayed -->
-					<table id="entries" class="table table-striped">
+					<table id="records" class="table table-striped">
 						<thead>
 							<tr>
 								<th>Author(s)</th>
@@ -24,26 +24,38 @@ get_header(); ?>
 						</thead>
 						<tbody>
 							<?php while (have_posts()) : the_post(); ?>
-								<?php get_template_part('parts/entry-loop'); ?> 
+								<?php get_template_part('parts/record-loop'); ?> 
 							<?php endwhile; ?>
 						</tbody>
 					</table>
 				</div>
 
-				<div id="entries_pager">
+				<div id="records_pager">
 					<?php echo facetwp_display('pager'); // FacetWP pager/pagination ?>
 				</div>
 			</div>
-			<div class="col-sm-3 entry-sidebar">
-				<a class="entry-header">Author</a>
+			<div class="col-sm-3 record-sidebar">
+				<a class="record-header">Author</a>
 				<?php echo facetwp_display( 'facet', 'author' ); ?>
-				<a class="entry-header">Place of publication</a>
-				<?php echo facetwp_display( 'facet', 'cities' ); ?>
-				<a class="entry-header">Year</a>
+				<a class="record-header">Collection</a>
+				<?php echo facetwp_display( 'facet', 'collection' ); ?>
+				<a class="record-header">City</a>
+				<?php echo facetwp_display( 'facet', 'city' ); ?>
+				<a class="record-header">Year</a>
 				<?php echo facetwp_display( 'facet', 'year' ); ?>
-				<a class="entry-header">Keywords</a>
+				<a class="record-header">Language</a>
+				<?php echo facetwp_display( 'facet', 'language' ); ?>
+				<a class="record-header">People</a>
+				<?php echo facetwp_display( 'facet', 'person' ); ?>
+				<a class="record-header">Performances</a>
+				<?php echo facetwp_display( 'facet', 'performance' ); ?>
+				<a class="record-header">Journal</a>
+				<?php echo facetwp_display( 'facet', 'journal' ); ?>
+				<a class="record-header">Keywords</a>
 				<?php echo facetwp_display( 'facet', 'tags' ); ?>
-				<a class="entry-header">Search</a>
+				<a class="record-header">Type</a>
+				<?php echo facetwp_display( 'facet', 'type' ); ?>
+				<a class="record-header">Search</a>
 				<?php echo facetwp_display( 'facet', 'search' ); ?>
 			</div>
 		</div>

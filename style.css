@@ -29,10 +29,23 @@ Domain Path: /languages/
 }
 
 /**
- * Showing the table labels on the left by default 
+ * Specifics for record table:
+ * - Smaller font size
+ * - Showing the table labels on the left by default 
+ * - No list styling
  */
-table th {
+#records {
+	font-size: 14px;
+}
+
+#records th {
 	text-align: left;
+}
+
+
+#records ul {
+	list-style-type: none;
+	margin: 0;
 }
 
 /**

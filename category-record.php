@@ -17,9 +17,9 @@ get_header(); ?>
 					<table id="records" class="table table-striped">
 						<thead>
 							<tr>
-								<th>Author(s)</th>
-								<th>Title</th>
-								<th>Year</th>
+								<th style="width: 25%">Author(s)</th>
+								<th style="width: 70%">Title</th>
+								<th style="width: 5%">Year</th>
 							</tr>
 						</thead>
 						<tbody>

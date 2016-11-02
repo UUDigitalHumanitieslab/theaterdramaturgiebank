@@ -118,6 +118,8 @@ Domain Path: /languages/
 /**
  * Mimicking the UU-search behavior, but:
  * - No fixed position, relative instead
+ * Also:
+ * - Anchors underlined
  */
 #home_search .searchfield {
 	background: none repeat scroll 0 0 #efefef;
@@ -139,6 +141,13 @@ Domain Path: /languages/
 
 #home_search a {
 	text-decoration: underline;
+}
+
+/**
+ * Grey background for the random record
+ */
+#home_random {
+	background: #efefef;
 }
 
 /**

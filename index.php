@@ -10,24 +10,24 @@ get_header(); ?>
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 	<div class="home-blog">
 		<p class="lead">
-			Welkom bij de TheaterDramaturgie.Bank!
+			TheaterDramaturgie.Bank (intro text here)
 		</p>
 		<div class="row">
 			
 			<div id="home_search" class="col-sm-6">
-				<h2>Zoeken in de database</h2>
+				<h2>Search the database</h2>
 				<p>
-					Je kunt zoeken in de database met onderstaand zoekveld,
-					of je kunt <a href="category/record/">starten met een lege zoekvraag</a>.
+					You can search the database using the free search field below,
+					or <a href="category/record/">start with an empty search query</a>.
 				</p>
 				<form method="get" action="category/record/">
-					<input type="text" name="fwp_search" placeholder="Doorzoek de database" class="searchfield">
+					<input type="text" name="fwp_search" placeholder="Search the database" class="searchfield">
 					<input type="submit" id="searchsubmit" class="searchbutton" value="">
 				</form>
 			</div>
 
-			<div class="col-sm-6">
-				<h2>Willekeurige record</h2>
+			<div id="home_random" class="col-sm-6">
+				<h2>Random record</h2>
 
 				<div class="agenda-archive">
 					<?php 
@@ -46,7 +46,7 @@ get_header(); ?>
 
 							<?php while ($query->have_posts()) : $query->the_post(); ?>
 
-								<?php get_template_part( 'parts/post-loop'); ?>
+								<?php get_template_part('parts/record-random'); ?>
 								<hr />
 
 							<?php endwhile; ?>

@@ -22,13 +22,29 @@ get_header(); ?>
 						<em>
 							<?php echo get_field('date'); ?> &bull; <?php echo get_field('city'); ?>
 						</em>
-						<p class="record-content">
+						<?php the_excerpt(); ?>
+						<button id="record-more-button" class="button icon">Read more</button>
+						<div id="record-more-content">
 							<?php the_content(); ?>
+						</div>
+						<h2>
+							Bibliography
+						</h2>
+						<p>
+							TODO!
 						</p>
 					</div>
 					<div class="col-sm-3 record-sidebar">
 						<?php
 							// Display the ACF-fields with a link back to the search page
+							function create_anchor($label, $value)
+							{
+								$anchor = '/category/record/?fwp_' . strtolower($label); 
+								$anchor .= '=' . sanitize_title_with_dashes($value);  // TODO: does not work for items with a '.'
+								return '<a href="' . $anchor . '">' . $value . '</a>';
+							}
+
+
 							$fields = get_field_objects();
 							ksort($fields);
 							foreach ($fields as $title => $field)
@@ -38,17 +54,34 @@ get_header(); ?>
 									echo '<a class="record-header">' . $field['label'] . '</a>';
 									echo '<p class="record-content">';
 
-									// TODO: make this more generic
+									// Special case for the year facet: select only the selected year as a range value
 									if ($field['label'] === 'Year')
 									{
 										$link = '/category/record/?fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
+									// Links back for the 'normal' facet fields
 									else if (in_array($field['label'], array('Collection', 'City', 'Journal', 'Type')))
 									{
-										$link = '/category/record/?fwp_' . strtolower($field['label']); 
-										$link .= '=' . sanitize_title_with_dashes($field['value']);  // TODO: does not work for items with a '.'
-										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
+										echo create_anchor($field['label'], $field['value']);
+									}
+									// Links back for repeater facet fields
+									else if (is_array($field['value']))
+									{
+										$subs = array(
+											'authors'		=> 'author',
+											'languages'		=> 'language',
+											'people'		=> 'person',
+											'performances'	=> 'performance',
+										);
+										$anchors = array();
+										foreach($field['value'] as $sub)
+										{
+											$key = $subs[strtolower($field['label'])];
+											$value = $sub[$key];
+											array_push($anchors, create_anchor($key, $value));
+										}
+										echo implode(', ', $anchors);
 									}
 									else
 									{
@@ -60,14 +93,20 @@ get_header(); ?>
 							}
 
 							// Display the tags with a link back to the search page
-							echo '<a class="record-header">Keywords</a>';
-							echo '<p class="record-content">';
-							foreach (get_the_tags() as $tag)
+							if (get_the_tags())
 							{
-								$link = '/category/record/?fwp_tags=' . $tag->slug;
-								echo '<a href="' . $link . '">' . $tag->name . '</a></br>';
+								echo '<a class="record-header">Keywords</a>';
+								echo '<p class="record-content">';
+
+								$anchors = array();
+								foreach (get_the_tags() as $tag)
+						{
+									array_push($anchors, create_anchor('tags', $tag->name));
+								}
+								echo implode(', ', $anchors);
+
+								echo '</p>';
 							}
-							echo '</p>';
 						?>
 					</div>
 				</div>
@@ -86,6 +125,16 @@ get_header(); ?>
 			?>
 
 		</article><?php // end article ?>
+
+		<script>
+		jQuery(function() {
+			jQuery("#record-more-content").hide();
+			jQuery("#record-more-button").click(function() {
+				jQuery("#record-more-content").show();
+				jQuery(this).hide();
+			});
+		});
+		</script>
 	
 	<?php endwhile; ?>
 

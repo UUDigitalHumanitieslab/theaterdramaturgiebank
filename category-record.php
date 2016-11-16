@@ -55,8 +55,6 @@ get_header(); ?>
 				<?php echo facetwp_display( 'facet', 'journal' ); ?>
 				<a class="record-header">Keywords</a>
 				<?php echo facetwp_display( 'facet', 'tags' ); ?>
-				<a class="record-header">Type</a>
-				<?php echo facetwp_display( 'facet', 'type' ); ?>
 			</div>
 		</div>
 

@@ -35,6 +35,8 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="col-sm-3 record-sidebar">
+				<a class="record-header">Search</a>
+				<?php echo facetwp_display( 'facet', 'search' ); ?>
 				<a class="record-header">Author</a>
 				<?php echo facetwp_display( 'facet', 'author' ); ?>
 				<a class="record-header">Collection</a>
@@ -55,8 +57,6 @@ get_header(); ?>
 				<?php echo facetwp_display( 'facet', 'tags' ); ?>
 				<a class="record-header">Type</a>
 				<?php echo facetwp_display( 'facet', 'type' ); ?>
-				<a class="record-header">Search</a>
-				<?php echo facetwp_display( 'facet', 'search' ); ?>
 			</div>
 		</div>
 

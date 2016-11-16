@@ -16,27 +16,34 @@ get_header(); ?>
 			<section class="record-content clearfix" itemprop="articleBody">
 				<div class="row">
 					<div class="col-sm-9 record-main">
+						<!-- Article title -->
 						<h1 class="record-title">
 							<?php the_title(); ?>
 						</h1>
+
+						<!-- Article content (excerpt + content) -->
 						<?php the_excerpt(); ?>
 						<button id="record-more-button" class="button icon">Read more</button>
 						<div id="record-more-content">
 							<?php the_content(); ?>
 						</div>
-						<h2>
-							Bibliography
-						</h2>
-						<p>
-							TODO!
-						</p>
+
+						<!-- Bibliography (if available) -->
+						<?php if (get_field('bibliography')) { ?>
+							<h2>
+								Bibliography
+							</h2>
+							<p>
+								<?php the_field('bibliography'); ?>
+							</p>
+						<?php } ?>
 					</div>
 					<div class="col-sm-3 record-sidebar">
 						<?php
 							// Display the ACF-fields with a link back to the search page
 							function create_anchor($label, $value)
 							{
-								$anchor = '/category/record/?fwp_' . strtolower($label); 
+								$anchor = '/category/record/?fwp_' . strtolower($label);
 								$anchor .= '=' . sanitize_title_with_dashes($value);  // TODO: does not work for items with a '.'
 								return '<a href="' . $anchor . '">' . $value . '</a>';
 							}
@@ -97,7 +104,7 @@ get_header(); ?>
 
 								$anchors = array();
 								foreach (get_the_tags() as $tag)
-						{
+								{
 									array_push($anchors, create_anchor('tags', $tag->name));
 								}
 								echo implode(', ', $anchors);

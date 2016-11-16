@@ -19,9 +19,6 @@ get_header(); ?>
 						<h1 class="record-title">
 							<?php the_title(); ?>
 						</h1>
-						<em>
-							<?php echo get_field('date'); ?> &bull; <?php echo get_field('city'); ?>
-						</em>
 						<?php the_excerpt(); ?>
 						<button id="record-more-button" class="button icon">Read more</button>
 						<div id="record-more-content">

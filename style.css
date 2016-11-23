@@ -118,14 +118,15 @@ Domain Path: /languages/
 /**
  * Mimicking the UU-search behavior, but:
  * - No fixed position, relative instead
+ * - Bigger font size
  * Also:
  * - Anchors underlined
  */
-#home_search .searchfield {
+#home_search_form .searchfield {
 	background: none repeat scroll 0 0 #efefef;
 	border: 0 none;
-	font-size: 14px;
-	height: 30px;
+	font-size: 18px;
+	height: 40px;
 	outline: medium none;
 	padding-left: 10px;
 	padding-right: 40px;
@@ -134,9 +135,10 @@ Domain Path: /languages/
 	line-height: 30px;
 }
 
-#home_search .searchbutton {
+#home_search_form .searchbutton {
 	position: relative;
-	left: -30px;
+	left: -35px;
+	font-size: 18px;
 }
 
 #home_search a {

@@ -20,10 +20,12 @@ get_header(); ?>
 					You can search the database using the free search field below,
 					or <a href="category/record/">start with an empty search query</a>.
 				</p>
-				<form method="get" action="category/record/">
-					<input type="text" name="fwp_search" placeholder="Search the database" class="searchfield">
-					<input type="submit" id="searchsubmit" class="searchbutton" value="">
-				</form>
+				<div id="home_search_form">
+					<form method="get" action="category/record/">
+						<input type="text" name="fwp_search" placeholder="Search the database" class="searchfield">
+						<input type="submit" id="searchsubmit" class="searchbutton" value="">
+					</form>
+				</div>
 			</div>
 
 			<div id="home_random" class="col-sm-6">

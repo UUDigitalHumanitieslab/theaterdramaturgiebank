@@ -77,6 +77,10 @@ Domain Path: /languages/
 	line-height: 20px;
 }
 
+.record-content a {
+	text-decoration: none;
+}
+
 /**
  * Mimicking the UU-pager behavior:
  * - Display pagination as blocks

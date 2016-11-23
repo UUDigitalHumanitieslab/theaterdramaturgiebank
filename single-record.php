@@ -17,7 +17,7 @@ get_header(); ?>
 				<div class="row">
 					<div class="col-sm-9 record-main">
 						<!-- Article title -->
-						<h1 class="record-title">
+						<h1>
 							<?php the_title(); ?>
 						</h1>
 
@@ -30,9 +30,9 @@ get_header(); ?>
 
 						<!-- Bibliography (if available) -->
 						<?php if (get_field('bibliography')) { ?>
-							<h2>
+							<h1>
 								Bibliography
-							</h2>
+							</h1>
 							<p>
 								<?php the_field('bibliography'); ?>
 							</p>
@@ -48,12 +48,12 @@ get_header(); ?>
 								return '<a href="' . $anchor . '">' . $value . '</a>';
 							}
 
-
+							$not_shown = array('bibliography');  // List of fields not displayed
 							$fields = get_field_objects();
 							ksort($fields);
 							foreach ($fields as $title => $field)
 							{
-								if ($field['value'])
+								if ($field['value'] && !in_array($title, $not_shown))
 								{
 									echo '<a class="record-header">' . $field['label'] . '</a>';
 									echo '<p class="record-content">';

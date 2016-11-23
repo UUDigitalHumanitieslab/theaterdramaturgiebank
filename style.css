@@ -50,16 +50,25 @@ Domain Path: /languages/
 
 /**
  * Specifics for record main content: 
+ * - Smaller font
  * - Smaller margins for title
  */
-.record-main .record-title {
+.record-main h1 {
+	font-size: 24px;
+	font-weight: bold;
 	margin: .5em 0 .5em 0;
 }
+
+.record-main p {
+	font-size: 16px;
+}
+
 
 /**
  * Specifics for record sidebar: 
  * - Underlined headers in details
  * - Smaller text in details
+ * - Anchors not underlined
  */
 .record-sidebar {
 	font-size: 14px;

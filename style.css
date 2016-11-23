@@ -187,3 +187,16 @@ Domain Path: /languages/
 #dhlab_image {
 	margin-top: .5em;
 }
+
+/**
+ *
+ */
+.keyword ul {
+	columns: 3;
+	-webkit-columns: 3;
+	-moz-columns: 3;
+}
+
+.keyword, .keyword li {
+	list-style-type: none;
+}

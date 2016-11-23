@@ -12,5 +12,7 @@ Below is a breakdown of the function of each file.
 * `functions.php`: Specific functions for this template.
 * `header.php`: Custom header, removed the site title.
 * `index.php`: Customized front page, displaying a search form and a random post with the 'Record' category.
+* `page-authors.php`: Page for displaying all authors.
+* `page-keywords.php`: Page for displaying all keywords.
 * `single-record.php`: Template for displaying a single post with the 'Record' category.
 * `style.css`: Custom CSS. 

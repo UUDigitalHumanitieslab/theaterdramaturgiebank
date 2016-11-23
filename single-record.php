@@ -23,10 +23,13 @@ get_header(); ?>
 
 						<!-- Article content (excerpt + content) -->
 						<?php the_excerpt(); ?>
-						<button id="record-more-button" class="button icon">Read more</button>
-						<div id="record-more-content">
-							<?php the_content(); ?>
-						</div>
+
+						<?php if (get_field('full-text')) { ?>
+							<button id="record-more-button" class="button icon">Read more</button>
+							<div id="record-more-content">
+								<?php the_content(); ?>
+							</div>
+						<?php } ?>
 
 						<!-- Bibliography (if available) -->
 						<?php if (get_field('bibliography')) { ?>
@@ -48,7 +51,7 @@ get_header(); ?>
 								return '<a href="' . $anchor . '">' . $value . '</a>';
 							}
 
-							$not_shown = array('bibliography');  // List of fields not displayed
+							$not_shown = array('bibliography', 'full-text');  // List of fields not displayed
 							$fields = get_field_objects();
 							ksort($fields);
 							foreach ($fields as $title => $field)
@@ -96,16 +99,17 @@ get_header(); ?>
 								}
 							}
 
-							// Display the tags with a link back to the search page
-							if (get_the_tags())
+							// Display the keywords with a link back to the search page
+							$keywords = get_the_terms($post->ID , 'keyword');
+							if ($keywords)
 							{
 								echo '<a class="record-header">Keywords</a>';
 								echo '<p class="record-content">';
 
 								$anchors = array();
-								foreach (get_the_tags() as $tag)
+								foreach ($keywords as $keyword)
 								{
-									array_push($anchors, create_anchor('tags', $tag->name));
+									array_push($anchors, create_anchor('keywords', $keyword->name));
 								}
 								echo implode(', ', $anchors);
 

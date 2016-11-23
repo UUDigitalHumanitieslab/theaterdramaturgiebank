@@ -189,7 +189,7 @@ Domain Path: /languages/
 }
 
 /**
- *
+ * Keywords page styling: 3 columns, no bullets
  */
 .keyword ul {
 	columns: 3;

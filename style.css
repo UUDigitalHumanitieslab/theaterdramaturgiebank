@@ -83,7 +83,7 @@ Domain Path: /languages/
 }
 
 .record-sidebar .record-content {
-	line-height: 20px;
+	line-height: normal;
 }
 
 .record-content a {
@@ -166,11 +166,12 @@ Domain Path: /languages/
 }
 
 /**
- * Smaller font size for facets, and less margin
+ * Smaller font size for facets, normal line-height and less margin
  */ 
 .facetwp-facet {
 	font-size: 14px;
-	margin-bottom: 20px !important;
+	line-height: normal;
+	margin-bottom: 10px !important;
 }
 
 /**

@@ -43,14 +43,6 @@ get_header(); ?>
 					</div>
 					<div class="col-sm-3 record-sidebar">
 						<?php
-							// Display the ACF-fields with a link back to the search page
-							function create_anchor($label, $value)
-							{
-								$anchor = '/category/record/?fwp_' . strtolower($label);
-								$anchor .= '=' . sanitize_title_with_dashes($value);  // TODO: does not work for items with a '.'
-								return '<a href="' . $anchor . '">' . $value . '</a>';
-							}
-
 							$not_shown = array('bibliography', 'full-text');  // List of fields not displayed
 							$fields = get_field_objects();
 							ksort($fields);

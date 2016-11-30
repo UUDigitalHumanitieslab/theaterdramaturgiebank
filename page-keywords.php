@@ -9,9 +9,29 @@ get_header(); ?>
 
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 
-<?php
-	wp_list_categories(array('taxonomy' => 'keyword', 'title_li' => '<h2>Keywords</h2>'));
-?>
+<h2>
+	Keywords
+</h2>
+<div class="keyword">
+	<ul>
+	<?php
+		$terms = get_terms(array('taxonomy' => 'keyword', 'hide_empty' => false));
+		$current_first = '';
+		foreach ($terms as $term)
+		{
+			$first = strtoupper($term->name[0]);
+			if ($first != $current_first)
+			{
+				echo '<h3>' . $first . '</h3>';
+				$current_first = $first;
+			}
+			echo '<li>';
+			echo create_anchor('keywords', $term->name);
+			echo '</li>';
+		}
+	?>
+	</ul>
+</div>
 
 <?php get_template_part( 'parts/page-footer-1col'); ?> 
 

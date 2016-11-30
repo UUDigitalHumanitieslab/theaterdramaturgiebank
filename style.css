@@ -199,5 +199,11 @@ Domain Path: /languages/
 }
 
 .keyword, .keyword li {
+	font-size: 18px;
+	line-height: normal;
 	list-style-type: none;
+}
+
+.keyword h3 {
+	margin: 10px 0px 5px 0px;
 }

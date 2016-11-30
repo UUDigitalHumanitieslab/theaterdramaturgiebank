@@ -41,8 +41,6 @@ get_header(); ?>
 				<?php echo facetwp_display( 'facet', 'author' ); ?>
 				<a class="record-header">Collection</a>
 				<?php echo facetwp_display( 'facet', 'collection' ); ?>
-				<a class="record-header">City</a>
-				<?php echo facetwp_display( 'facet', 'city' ); ?>
 				<a class="record-header">Year</a>
 				<?php echo facetwp_display( 'facet', 'year' ); ?>
 				<a class="record-header">Language</a>

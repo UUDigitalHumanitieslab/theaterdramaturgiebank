@@ -68,7 +68,7 @@ get_header(); ?>
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
 									// Links back for the 'normal' facet fields
-									else if (in_array($field['label'], array('Collection', 'City', 'Journal')))
+									else if (in_array($field['label'], array('Collection', 'Journal')))
 									{
 										echo create_anchor($field['label'], $field['value']);
 									}

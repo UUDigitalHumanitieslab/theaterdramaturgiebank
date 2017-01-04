@@ -67,4 +67,29 @@ function create_anchor($label, $value)
 	return '<a href="' . $anchor . '">' . $value . '</a>';
 }
 
+// Add sorting on year, remove sorting on date
+function my_facetwp_sort_options( $options, $params ) {
+	$options['year_asc'] = array(
+		'label' => 'Year (ascending)',
+		'query_args' => array(
+			'orderby'	=> 'meta_value_num',
+			'meta_key'	=> 'year',
+			'order'		=> 'ASC',
+		)
+	);
+	$options['year_desc'] = array(
+		'label' => 'Year (descending)',
+		'query_args' => array(
+			'orderby'	=> 'meta_value_num',
+			'meta_key'	=> 'year',
+			'order'		=> 'DESC',
+		)
+	);
+	unset($options['date_desc']);
+	unset($options['date_asc']);
+	return $options;
+}
+
+add_filter( 'facetwp_sort_options', 'my_facetwp_sort_options', 10, 2 );
+
 ?>

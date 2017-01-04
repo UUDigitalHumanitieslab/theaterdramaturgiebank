@@ -30,8 +30,13 @@ get_header(); ?>
 					</table>
 				</div>
 
-				<div id="records_pager">
-					<?php echo facetwp_display('pager'); // FacetWP pager/pagination ?>
+				<div id="records_pager" class="row">
+					<div class="col-sm-4">
+						Sort by <?php echo facetwp_display('sort'); // FacetWP sort ?>
+					</div>
+					<div class="col-sm-8">
+						<?php echo facetwp_display('pager'); // FacetWP pager/pagination ?>
+					</div>
 				</div>
 			</div>
 			<div class="col-sm-3 record-sidebar">

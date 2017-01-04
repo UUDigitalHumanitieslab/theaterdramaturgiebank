@@ -95,37 +95,42 @@ Domain Path: /languages/
  * - Display pagination as blocks
  * - Active page is yellow
  * - Don't display number of pages
+ * - Sorting inline
  */
 #records_pager {
 	text-align: center;
-	border-top: 1px solid #efefef;
+	border-top: 1px solid #000000;
+	font-size: 14px;
 }
 
-#records_pager .facetwp-page {
+.facetwp-pager .facetwp-page {
 	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
 	background: #efefef;
 	display: inline-block;
 	height: 40px;
 	width: 40px;
 	line-height: 40px;
-	font-size: 15px;
 	color: black;
 	text-decoration: none;
 	margin: 0 5px;
 	text-align: center;
 }
 
-#records_pager .facetwp-page.active {
+.facetwp-pager .facetwp-page.active {
 	background-color: #ffcd00;
 }
 
-#records_pager .facetwp-page.first-page, #records_pager .facetwp-page.last-page {
+.facetwp-pager .facetwp-page.first-page, #records_pager .facetwp-page.last-page {
 	background-color: black;
 	color: white;
 }
 
-#records_pager .facetwp-pager-label {
+.facetwp-pager .facetwp-pager-label {
 	display: none;
+}
+
+.facetwp-sort {
+	display: inline;
 }
 
 /**

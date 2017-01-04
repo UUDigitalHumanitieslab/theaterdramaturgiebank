@@ -32,9 +32,8 @@ get_header(); ?>
 			<div id="home_random" class="col-sm-6">
 				<h2>Random record</h2>
 
-				<div class="agenda-archive">
-					<?php 
-
+				<div>
+					<?php
 					// Show 1 random record from the archive
 					$q = array(
 						'post_type'				=> 'post',
@@ -45,20 +44,11 @@ get_header(); ?>
 
 					$query = new WP_Query($q);
 
-						if ( $query->have_posts() ) : ?>
-
-							<?php while ($query->have_posts()) : $query->the_post(); ?>
-
-								<?php get_template_part('parts/record-random'); ?>
-								<hr />
-
-							<?php endwhile; ?>
-
-						<?php else : ?>
-						<div class="no-events">
-							<?php _e('No upcoming events', 'uu2014') ?>
-						</div>
-						<?php endif; ?>
+					if ( $query->have_posts() ) : ?>
+						<?php while ($query->have_posts()) : $query->the_post(); ?>
+							<?php get_template_part('parts/record-random'); ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 			

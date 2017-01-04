@@ -58,7 +58,6 @@ add_filter('single_template', create_function(
 	return $the_template;' )
 );
 
-
 // Display the ACF-fields with a link back to the search page
 function create_anchor($label, $value)
 {
@@ -68,7 +67,8 @@ function create_anchor($label, $value)
 }
 
 // Add sorting on year, remove sorting on date
-function my_facetwp_sort_options( $options, $params ) {
+function my_facetwp_sort_options($options, $params)
+{
 	$options['year_asc'] = array(
 		'label' => 'Year (ascending)',
 		'query_args' => array(
@@ -90,6 +90,6 @@ function my_facetwp_sort_options( $options, $params ) {
 	return $options;
 }
 
-add_filter( 'facetwp_sort_options', 'my_facetwp_sort_options', 10, 2 );
+add_filter('facetwp_sort_options', 'my_facetwp_sort_options', 10, 2);
 
 ?>

@@ -18,10 +18,11 @@ get_header(); ?>
 				<h2>Search the database</h2>
 				<p>
 					You can search the database using the free search field below,
-					or <a href="category/record/">start with an empty search query</a>.
+					or <a href="<?php echo SEARCH_PAGE; ?>">start with an empty search query</a>.
 				</p>
 				<div id="home_search_form">
-					<form method="get" action="category/record/">
+					<form method="get" action="<?php echo SEARCH_PAGE; ?>">
+						<input type="hidden" name="fwp_sort" value="year_desc"> <!-- necessary to keep default sort order -->
 						<input type="text" name="fwp_search" placeholder="Search the database" class="searchfield">
 						<input type="submit" id="searchsubmit" class="searchbutton" value="">
 					</form>

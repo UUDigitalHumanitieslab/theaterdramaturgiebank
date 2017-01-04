@@ -56,7 +56,8 @@ get_header(); ?>
 									// Special case for the year facet: select only the selected year as a range value
 									if ($field['label'] === 'Year')
 									{
-										$link = '/category/record/?fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
+										$link = SEARCH_PAGE;
+										$link .= '&fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
 									// Links back for the 'normal' facet fields

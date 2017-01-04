@@ -1,5 +1,7 @@
 <?php
 
+defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_sort=year_desc');
+
 // Adds a child theme CSS file
 add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_style', 30 );
 
@@ -61,7 +63,7 @@ add_filter('single_template', create_function(
 // Display the ACF-fields with a link back to the search page
 function create_anchor($label, $value)
 {
-	$anchor = '/category/record/?fwp_' . strtolower($label);
+	$anchor = SEARCH_PAGE . '&fwp_' . strtolower($label);
 	$anchor .= '=' . sanitize_title_with_dashes($value);  // TODO: does not work for items with a '.'
 	return '<a href="' . $anchor . '">' . $value . '</a>';
 }
@@ -85,6 +87,7 @@ function my_facetwp_sort_options($options, $params)
 			'order'		=> 'DESC',
 		)
 	);
+	$options['default']['query_args'] = $options['year_desc']['query_args'];
 	unset($options['date_desc']);
 	unset($options['date_asc']);
 	return $options;

@@ -188,13 +188,6 @@ Domain Path: /languages/
 }
 
 /**
- * Move dh-lab image a bit upwards
- */
-#dhlab_image {
-	margin-top: .5em;
-}
-
-/**
  * Keywords page styling: 3 columns, no bullets
  */
 .keyword ul {
@@ -232,4 +225,12 @@ Domain Path: /languages/
 
 .current-menu-item .home-icon, .home-icon, .home-icon:hover {
     fill: #111111 !important;
+}
+
+/**
+ * Give colophon grey background.
+ */
+#colophon {
+	background-color: #efefef;
+	padding: 14px;
 }

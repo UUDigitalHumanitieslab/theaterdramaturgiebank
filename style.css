@@ -188,21 +188,21 @@ Domain Path: /languages/
 }
 
 /**
- * Keywords page styling: 3 columns, no bullets
+ * Alphabetical listing page styling: 3 columns, no bullets
  */
-.keyword ul {
+.listing ul {
 	columns: 3;
 	-webkit-columns: 3;
 	-moz-columns: 3;
 }
 
-.keyword, .keyword li {
+.listing, .listing li {
 	font-size: 18px;
 	line-height: normal;
 	list-style-type: none;
 }
 
-.keyword h3 {
+.listing h3 {
 	margin: 10px 0px 5px 0px;
 }
 

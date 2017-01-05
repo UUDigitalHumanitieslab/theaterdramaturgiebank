@@ -12,7 +12,7 @@ get_header(); ?>
 <h2>
 	Keywords
 </h2>
-<div class="keyword">
+<div class="listing">
 	<ul>
 	<?php
 		$terms = get_terms(array('taxonomy' => 'keyword', 'hide_empty' => false));

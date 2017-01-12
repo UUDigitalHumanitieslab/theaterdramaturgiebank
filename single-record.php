@@ -13,7 +13,7 @@ get_header(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 		
-			<section class="record-content clearfix" itemprop="articleBody">
+			<section class="clearfix" itemprop="articleBody">
 				<div class="row">
 					<div class="col-sm-9 record-main">
 						<!-- Article title -->

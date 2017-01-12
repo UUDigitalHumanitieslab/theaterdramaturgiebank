@@ -49,20 +49,26 @@ Domain Path: /languages/
 }
 
 /**
- * Specifics for record main content: 
+ * Specifics for record/person main content:
  * - Smaller font
  * - Smaller margins for title
  */
-.record-main h1 {
+.record-main h1, .person-main h1 {
 	font-size: 24px;
 	font-weight: bold;
 	margin: .5em 0 .5em 0;
 }
 
-.record-main p {
+.record-main p, .person-main p {
 	font-size: 16px;
 }
 
+/**
+ * Margin for the person image.
+ */
+.person-image {
+	margin-right: 10px;
+}
 
 /**
  * Specifics for record sidebar: 

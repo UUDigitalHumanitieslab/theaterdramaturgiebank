@@ -40,7 +40,9 @@ get_header(); ?>
 			$current_first = $first;
 		}
 		echo '<li>';
-		echo create_anchor('author', get_the_title());
+		echo '<a href="' . get_the_permalink() . '">';
+		echo get_the_title();
+		echo '</a>';
 		echo '</li>';
 
 		?>

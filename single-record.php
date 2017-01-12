@@ -16,6 +16,10 @@ get_header(); ?>
 			<section class="clearfix" itemprop="articleBody">
 				<div class="row">
 					<div class="col-sm-9 record-main">
+						<div class="record-image pull-left">
+							<?php the_post_thumbnail('full', array('class' => 'img-responsive img-thumbnail')); ?>
+						</div>
+
 						<!-- Article title -->
 						<h1>
 							<?php the_title(); ?>

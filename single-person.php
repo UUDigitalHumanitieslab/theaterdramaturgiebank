@@ -26,7 +26,7 @@ get_header(); ?>
 					<!-- Article content (content) -->
 					<?php the_content(); ?>
 
-					<!-- TODO: show records linked to author -->
+					<!-- TODO: show records linked to person -->
 				</div>
 				
 			</section><?php // end article section ?>

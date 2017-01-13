@@ -42,32 +42,43 @@ Domain Path: /languages/
 	text-align: left;
 }
 
-
 #records ul {
 	list-style-type: none;
 	margin: 0;
 }
 
+#records a {
+	text-decoration: none;
+}
+
 /**
- * Specifics for record/person main content:
+ * Specifics for record/collection/person main content:
  * - Smaller font
- * - Smaller margins for title
+ * - Smaller margins/line-height for title
  */
-.record-main h1, .person-main h1 {
-	font-size: 24px;
+.record-main h1, .collection-main h1, .person-main h1,
+.record-main h2, .collection-main h2, .person-main h2 {
 	font-weight: bold;
 	margin: .5em 0 .5em 0;
 	line-height: normal;
 }
 
-.record-main p, .person-main p {
+.record-main h1, .collection-main h1, .person-main h1 {
+	font-size: 24px;
+}
+
+.record-main h2, .collection-main h2, .person-main h2 {
+	font-size: 20px;
+}
+
+.record-main p, .collection-main p, .person-main p {
 	font-size: 16px;
 }
 
 /**
- * Margin for the record/person image.
+ * Margin for the record/collection/person image.
  */
-.record-image, .person-image {
+.record-image, .collection-image, .person-image {
 	margin-right: 10px;
 }
 
@@ -141,6 +152,49 @@ Domain Path: /languages/
 }
 
 /**
+ * Smaller font size for facets, normal line-height and less margin
+ */ 
+.facetwp-facet {
+	font-size: 14px;
+	line-height: normal;
+	margin-bottom: 10px !important;
+}
+
+/**
+ * Smaller inputs for number range facets
+ */
+.facetwp-type-number_range input {
+	width: 70px;
+	margin: 0px 5px 0px 10px;
+}
+
+/**
+ * Toggles in italic
+ */ 
+.facetwp-toggle {
+	font-style: italic;
+}
+
+/**
+ * Alphabetical listing page styling: 3 columns, no bullets
+ */
+.listing ul {
+	columns: 3;
+	-webkit-columns: 3;
+	-moz-columns: 3;
+}
+
+.listing, .listing li {
+	font-size: 18px;
+	line-height: normal;
+	list-style-type: none;
+}
+
+.listing h3 {
+	margin: 10px 0px 5px 0px;
+}
+
+/**
  * Mimicking the UU-search behavior, but:
  * - No fixed position, relative instead
  * - Bigger font size
@@ -175,42 +229,6 @@ Domain Path: /languages/
  */
 #home_random {
 	background: #efefef;
-}
-
-/**
- * Smaller font size for facets, normal line-height and less margin
- */ 
-.facetwp-facet {
-	font-size: 14px;
-	line-height: normal;
-	margin-bottom: 10px !important;
-}
-
-/**
- * Smaller inputs for number range facets
- */
-.facetwp-type-number_range input {
-	width: 70px;
-	margin: 0px 5px 0px 10px;
-}
-
-/**
- * Alphabetical listing page styling: 3 columns, no bullets
- */
-.listing ul {
-	columns: 3;
-	-webkit-columns: 3;
-	-moz-columns: 3;
-}
-
-.listing, .listing li {
-	font-size: 18px;
-	line-height: normal;
-	list-style-type: none;
-}
-
-.listing h3 {
-	margin: 10px 0px 5px 0px;
 }
 
 /**

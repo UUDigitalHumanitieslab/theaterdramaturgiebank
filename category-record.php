@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'parts/page-header-1col'); ?> 
+<?php get_template_part('parts/page-header-1col'); ?> 
 
 	<?php if ( have_posts() ) : ?>
 
@@ -65,10 +65,10 @@ get_header(); ?>
 
 	<?php else : ?>
 
-		<?php get_template_part('includes/template','error'); //wordpress template error message ?>
+		<?php get_template_part('includes/template', 'error'); //wordpress template error message ?>
 
 	<?php endif; ?>
 
-<?php get_template_part( 'parts/page-footer-1col'); ?>
+<?php get_template_part('parts/page-footer-1col'); ?>
 
 <?php get_footer();

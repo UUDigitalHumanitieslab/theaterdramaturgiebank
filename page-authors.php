@@ -10,7 +10,7 @@ get_header(); ?>
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 
 <h2>
-	Authors
+	Author index
 </h2>
 <div class="listing">
 	<ul>

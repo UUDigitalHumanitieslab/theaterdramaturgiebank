@@ -1,29 +1,25 @@
 <?php 
 /**
  * The template for displaying a single post with the 'collection' category.
- *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  */
 
 get_header(); ?>
 
-<?php get_template_part( 'parts/page-header-1col'); ?> 
+<?php get_template_part('parts/page-header-1col'); ?> 
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-		
 			<section class="clearfix" itemprop="articleBody">
 				<div class="collection-main">
 					<div class="collection-image pull-left">
 						<?php the_post_thumbnail('full', array('class' => 'img-responsive img-thumbnail')); ?>
 					</div>
-					<!-- Article title -->
 					<h1>
 						<?php the_title(); ?>
 					</h1>
-
-					<!-- Article content (content) -->
+					
 					<?php the_content(); ?>
 
 					<h2>
@@ -69,33 +65,19 @@ get_header(); ?>
 						</table>
 
 					<?php else : ?>
-						<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+						<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 					<?php endif; ?>
 				</div>
-				
 			</section><?php // end article section ?>
-
 			<footer class="article-footer">
-
-			</footer><?php // end article footer ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
+			</footer><?php // end article footer ?>=
 		</article><?php // end article ?>
 	
 	<?php endwhile; ?>
-
 	<?php else : ?>
-
 		<?php get_template_part('includes/template','error'); // WordPress template error message ?>
-
 	<?php endif; ?>
 
-<?php get_template_part( 'parts/page-footer-1col'); ?> 
+<?php get_template_part('parts/page-footer-1col'); ?> 
 
 <?php get_footer(); ?>

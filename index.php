@@ -1,13 +1,14 @@
 <?php 
 /**
  * The template for displaying the home page content.
- *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * This front page displays a lead text, followed by two columns with a search bar and a random record from the database.
  */
 
 get_header(); ?>
 
-<?php get_template_part( 'parts/page-header-1col'); ?> 
+<?php get_template_part('parts/page-header-1col'); ?> 
 	<div class="home-blog">
 		<p class="lead">
 			TheaterDramaturgie.Bank (intro text here)
@@ -44,7 +45,7 @@ get_header(); ?>
 
 					$query = new WP_Query($q);
 
-					if ( $query->have_posts() ) : ?>
+					if ($query->have_posts()) : ?>
 						<?php while ($query->have_posts()) : $query->the_post(); ?>
 							<?php get_template_part('parts/record-random'); ?>
 						<?php endwhile; ?>
@@ -55,13 +56,8 @@ get_header(); ?>
 		</div>
 	</div>
 
-<?php // get_template_part( 'parts/widgetarea', 'below-content' ); ?>  
-
-			</div> <!-- /page-content -->
-		</div> <!-- /col-sm-8 /col-sm-12 -->
-	
-
-
+</div> <!-- /page-content -->
+</div> <!-- /col-sm-8 /col-sm-12 -->
 </div> <!-- /container -->
-			
+
 <?php get_footer();

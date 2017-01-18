@@ -1,15 +1,16 @@
 <?php
 /**
  * The template for displaying a list of posts with the 'record' category.
- *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * Displays all posts and creates a sidebar with facets to filter the posts.
  */
 
 get_header(); ?>
 
 <?php get_template_part('parts/page-header-1col'); ?> 
 
-	<?php if ( have_posts() ) : ?>
+	<?php if (have_posts()) : ?>
 
 		<div class="row">
 			<div class="col-sm-9">
@@ -41,25 +42,25 @@ get_header(); ?>
 			</div>
 			<div class="col-sm-3 record-sidebar">
 				<a class="record-header">Search</a>
-				<?php echo facetwp_display( 'facet', 'search' ); ?>
+				<?php echo facetwp_display('facet', 'search'); ?>
 				<a class="record-header">Author</a>
-				<?php echo facetwp_display( 'facet', 'author' ); ?>
+				<?php echo facetwp_display('facet', 'author'); ?>
 				<a class="record-header">Collection</a>
-				<?php echo facetwp_display( 'facet', 'collection' ); ?>
+				<?php echo facetwp_display('facet', 'collection'); ?>
 				<a class="record-header">Year</a>
-				<?php echo facetwp_display( 'facet', 'year' ); ?>
+				<?php echo facetwp_display('facet', 'year'); ?>
 				<a class="record-header">Language</a>
-				<?php echo facetwp_display( 'facet', 'language' ); ?>
+				<?php echo facetwp_display('facet', 'language'); ?>
 				<a class="record-header">People</a>
-				<?php echo facetwp_display( 'facet', 'person' ); ?>
+				<?php echo facetwp_display('facet', 'person'); ?>
 				<a class="record-header">Performances</a>
-				<?php echo facetwp_display( 'facet', 'performance' ); ?>
+				<?php echo facetwp_display('facet', 'performance'); ?>
 				<a class="record-header">Journal</a>
-				<?php echo facetwp_display( 'facet', 'journal' ); ?>
+				<?php echo facetwp_display('facet', 'journal'); ?>
 				<a class="record-header">Has full-text?</a>
-				<?php echo facetwp_display( 'facet', 'full-text' ); ?>
+				<?php echo facetwp_display('facet', 'full-text'); ?>
 				<a class="record-header">Keywords</a>
-				<?php echo facetwp_display( 'facet', 'keywords' ); ?>
+				<?php echo facetwp_display('facet', 'keywords'); ?>
 			</div>
 		</div>
 

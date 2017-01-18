@@ -1,3 +1,9 @@
+<?php
+/**
+ * Custom brandbar, in which we added the blog name to the header, but remove the search functionality
+ */
+?>
+
 <div id="brandbar" class="affix-top">
 	<div class="container">
 		<div class="row">
@@ -39,8 +45,6 @@
 			<h1><?php bloginfo('name'); ?></h1>
 		</div>	
 			</div>
-
-			<!-- TDB: Add the blog name to the header, but remove the search functionality !-->
 
 		<div class="col-sm-8 col-xs-8 blog-name">
 			<h1>

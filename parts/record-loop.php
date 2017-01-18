@@ -1,3 +1,9 @@
+<?php
+/**
+ * Shows a single 'record' post as part of a table.
+ */
+?>
+
 <tr>
 	<td>
 		<ul>

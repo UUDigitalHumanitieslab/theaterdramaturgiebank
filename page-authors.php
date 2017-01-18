@@ -1,13 +1,14 @@
 <?php
 /**
  * The template for displaying the page with the slug "authors".
- *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * Displays all posts of type 'record' in an alphabetical listing.
  */
 
 get_header(); ?>
 
-<?php get_template_part( 'parts/page-header-1col'); ?> 
+<?php get_template_part('parts/page-header-1col'); ?> 
 
 <h2>
 	Author index
@@ -15,18 +16,17 @@ get_header(); ?>
 <div class="listing">
 	<ul>
 	<?php
-	// Find posts with category person
-	$args = array(
-		'post_type'			=> 'post',
-		'category_name'		=> 'person',
-		'order'				=> 'ASC',
-		'meta_key'			=> 'last_name',
-		'orderby' 			=> 'meta_value',
-		'posts_per_page'	=>	'-1',
-	);
-	$wp_query = new WP_Query($args);
-	$current_first = '';
-
+		// Find posts with category person, sorted on last name
+		$args = array(
+			'post_type'			=> 'post',
+			'category_name'		=> 'person',
+			'order'				=> 'ASC',
+			'meta_key'			=> 'last_name',
+			'orderby' 			=> 'meta_value',
+			'posts_per_page'	=>	'-1',
+		);
+		$wp_query = new WP_Query($args);
+		$current_first = '';
 	?>
 
 	<?php if ($wp_query->have_posts()) : ?>	
@@ -46,11 +46,11 @@ get_header(); ?>
 		?>
 	<?php endwhile; ?>
 	<?php else : ?>
-		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
 	</ul>
 </div>
 
-<?php get_template_part( 'parts/page-footer-1col'); ?> 
+<?php get_template_part('parts/page-footer-1col'); ?> 
 
 <?php get_footer();

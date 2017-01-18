@@ -1,13 +1,14 @@
 <?php 
 /**
  * The template for displaying a single post with the 'record' category.
- *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * Shows the record and contains a sidebar with all custom fields and a link back to the faceted search.
  */
 
 get_header(); ?>
 
-<?php get_template_part( 'parts/page-header-1col'); ?> 
+<?php get_template_part('parts/page-header-1col'); ?> 
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -47,6 +48,7 @@ get_header(); ?>
 					</div>
 					<div class="col-sm-3 record-sidebar">
 						<?php
+							// Display the custom fields, with a link back to the faceted search
 							$not_shown = array('bibliography', 'full-text');  // List of fields not displayed
 							$fields = get_field_objects();
 							ksort($fields);
@@ -115,40 +117,27 @@ get_header(); ?>
 						?>
 					</div>
 				</div>
-				
 			</section><?php // end article section ?>
-
 			<footer class="article-footer">
-
 			</footer><?php // end article footer ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
 		</article><?php // end article ?>
 
 		<script>
-		jQuery(function() {
-			jQuery("#record-more-content").hide();
-			jQuery("#record-more-button").click(function() {
-				jQuery("#record-more-content").show();
-				jQuery(this).hide();
+			// Hide the additional content until the "more"-button is clicked.
+			jQuery(function() {
+				jQuery("#record-more-content").hide();
+				jQuery("#record-more-button").click(function() {
+					jQuery("#record-more-content").show();
+					jQuery(this).hide();
+				});
 			});
-		});
 		</script>
 	
 	<?php endwhile; ?>
-
 	<?php else : ?>
-
-		<?php get_template_part('includes/template','error'); // WordPress template error message ?>
-
+		<?php get_template_part('includes/template', 'error'); // WordPress template error message ?>
 	<?php endif; ?>
 
-<?php get_template_part( 'parts/page-footer-1col'); ?> 
+<?php get_template_part('parts/page-footer-1col'); ?> 
 
 <?php get_footer(); ?>

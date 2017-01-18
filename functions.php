@@ -1,17 +1,22 @@
 <?php
 
+/**
+ * This file contains functions and hooks for this child theme.
+ */
+
+// Sets the search page used throughout this child theme
 defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_sort=year_desc');
 
 // Adds a child theme CSS file
-add_action( 'wp_enqueue_scripts', 'enqueue_child_theme_style', 30 );
+add_action('wp_enqueue_scripts', 'enqueue_child_theme_style', 30);
 
 function enqueue_child_theme_style() {
-	wp_register_style( 'theaterdramaturgiebank', get_stylesheet_uri(), array('uu2014-stylesheet'));
-    wp_enqueue_style( 'theaterdramaturgiebank' );
+	wp_register_style('theaterdramaturgiebank', get_stylesheet_uri(), array('uu2014-stylesheet'));
+    wp_enqueue_style('theaterdramaturgiebank');
 }
 
 // Loads specific translations for this child theme
-load_theme_textdomain( 'uu2014-theaterdramaturgiebank', get_stylesheet_directory() . '/languages' );
+load_theme_textdomain('uu2014-theaterdramaturgiebank', get_stylesheet_directory() . '/languages');
 
 // Register Keyword Taxonomy (hiearchical)
 function keywords_taxonomy() {

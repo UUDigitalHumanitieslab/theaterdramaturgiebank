@@ -1,12 +1,10 @@
-=======================
-TheaterDramaturgie.Bank
-=======================
-Technical and user documentation
-
+==========================================
+TheaterDramaturgie.Bank user documentation
+==========================================
 
 Introduction
 ============
-In this document we'll describe how to add new and edit existing content for the TheaterDramaturgieBank_ WordPress_ website. We'll focus mainly on adding and editing speakers and videos. 
+In this document we'll describe how to add new and edit existing content for the TheaterDramaturgieBank_ WordPress_ website. 
 WordPress is a commonly used content management system, so if there's something you can't seem to find in this document, you might be able to find a solution by googling. Also, each page in the administrative section of WordPress has a "Help" button on the top right of the page.
 
 .. _TheaterDramaturgieBank: http://theaterdramaturgiebank.sites.uu.nl/
@@ -23,18 +21,53 @@ You can log in to the administrative section of the website via `this link`_. Us
 
 Adding users
 ------------
-You can add users by navigating to *Users -> Add user*. You can use Solis-ID's in the username field. For the role, you can choose what suits you, see here for an overview of capabilities per role.
+You can add users by navigating to *Users -> Add user*. You can use Solis-ID's in the username field. For the role, you can choose what suits you, see `here`_ for an overview of capabilities per role.
 
 .. _here: https://codex.wordpress.org/Roles_and_Capabilities#Summary_of_Roles
 
 Searching
 =========
-The database can be searched 
+The database can be searched using the faceted search provided by FacetWP_. You can change some of the facet settings in the *Settings -> FacetWP* administration menu item (tab *Facets*). You can e.g. change the number of items shown per facet. 
 
-Note that the database will be automatically re-indexed after updating a post. If you would want to a manual 
+Note that the database will be automatically re-indexed after updating a post. If you would want to a manual re-index, you can do that by clicking the (white) *Re-index* button in the *Settings -> FacetWP* administration menu item (tab *Facets*).
+
+.. _FacetWP: https://facetwp.com/
+
+Importing posts
+===============
+You can import new posts (or update existing posts) by using the `WP All Import`_ plug-in. This plug-in allows for uploading .csv-files into WordPress. A .csv-file can be created from Microsoft Excel by using the *Save as...*-functionality.
+
+The plug-in can be accessed from the administration menu by clicking on *All Import*. Click *Manage imports* from the menu to view existing imports, and click one the available import to upload a new version of the file which contains all records. The importer will try to match each row of the import to an existing post by using the **key** field from the .csv-file.
+
+.. _`WP All Import`: http://www.wpallimport.com/
 
 Editing posts
 =============
+
+Adding a record
+---------------
+Normally, records are created during import (see the previous section), but if necessary, you can add records via the *Posts* section of the dashboard. Create a new post by clicking the *Add New* button. In the right part of the window, select *record* as category. This will add a few extra fields to your post:
+
+- Author(s)
+- Collection
+- Year
+- Languages
+- People
+- Performance(s)
+- Issue
+- Journal
+- Original publication
+- Publisher
+- Bibliography
+- Has full-text?
+
+Make sure to fill out all required fields (marked by a red asterisk) and click the blue *Publish* button to add the record to the website. You can also save a draft by clicking the grey *Save draft* button. 
+
+Adding a collection
+-------------------
+You can add collections via the *Posts* section of the dashboard. Create a new post by clicking the *Add New* button. In the right part of the window, select *Collection* as category. Make sure to use the **exact same title** that is used for records to be able to show records linked to a collection.
+
+Make sure to fill out all required fields (marked by a red asterisk) and click the blue *Publish* button to add the person to the website. You can also save a draft by clicking the grey *Save draft* button. 
 
 Adding a person
 ---------------
@@ -45,11 +78,15 @@ You can add persons via the *Posts* section of the dashboard. Create a new post 
 - Last name (used for lookup in the alphabetical index)
 - Link (to the speaker's website) 
 
-Make sure to fill out all required fields (marked by a red asterisk) and click the blue *Publish* button to add the speaker to the website. You can also save a draft by clicking the grey *Save draft* button. 
+Make sure to fill out all required fields (marked by a red asterisk) and click the blue *Publish* button to add the person to the website. You can also save a draft by clicking the grey *Save draft* button. 
 
-Editing a person
-----------------
-In the *Posts* section, you can also edit persons by clicking the items in the list. You can use the filters above the post list to only select posts that have the category *Person*. You can also search the archive with the search filter on the right.
+Editing posts
+-------------
+In the *Posts* section, you can also edit persons by clicking the items in the list. You can use the filters above the post list to only select posts of a specific category. You can also search the archive with the search filter on the right.
+
+Adding images
+-------------
+To add images to a post, you can use either the *Featured image* (bottom right when you edit a post) or add images inline using the *Add media* button. The former is only shown for collections, in the list of collections as well as on the detail page.
 
 Adding videos from YouTube, Vimeo, etc.
 ---------------------------------------
@@ -61,7 +98,7 @@ Editing other content
 =====================
 About section on home page
 --------------------------
-You can edit the about section on the home page by navigating to *Appearance -> Widgets*. In the box named “Home Widget Area 1” there's a widget called “About this website”. If you click on the widget, you'll find a button with which you can edit the content of this widget.
+You can edit the about page from the menu by navigating to *Pages* and then clicking the page titled *About (home)*.
 
 About page in menu 
 ------------------
@@ -71,6 +108,6 @@ Contact page in menu
 --------------------
 You can edit the about page from the menu by navigating to *Pages* and then clicking the page titled *Contact*.
 
-Martijn van der Klis, `Digital Humanities Lab`_, 12 January 2017.
+Martijn van der Klis, `Digital Humanities Lab`_, 18 January 2017.
 
 .. _`Digital Humanities Lab`: http://dig.hum.uu.nl/

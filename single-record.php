@@ -49,66 +49,80 @@ get_header(); ?>
 					<div class="col-sm-3 record-sidebar">
 						<?php
 							// Display the custom fields, with a link back to the faceted search
-							$not_shown = array('key', 'bibliography', 'full-text');  // List of fields not displayed
 							$fields = get_field_objects();
 							ksort($fields);
 							foreach ($fields as $title => $field)
 							{
-								if ($field['value'] && !in_array($title, $not_shown))
+								$value = $field['value'];
+
+								// Don't display fields without a value, or fields that are displayed/used elsewhere
+								if (!$value || in_array($title, array('key', 'bibliography', 'full-text')))
+								{
+									continue;
+								}
+
+								// Retrieve the link back to the search page
+								$anchor = '';
+								// Special case for objects (linked posts)
+								if (is_object($value))
+								{
+									$anchor = create_anchor($title, $value->ID, $value->post_title);
+								}
+								// Special case for repeater facet fields
+								else if (is_array($value))
+								{
+									$subs = array(
+										'authors'		=> 'author',
+										'languages'		=> 'language',
+										'people'		=> 'person',
+										'performances'	=> 'performance',
+									);
+									$anchors = array();
+									foreach ($value as $sub)
+									{
+										$s_key = $subs[$title];
+										$s_value = $sub[$s_key];
+										if ($s_value)
+										{
+											array_push($anchors, create_anchor($s_key, $s_value));
+										}
+									}
+									$anchor = implode(', ', $anchors);
+								}
+								// Special case for the year facet: select only the selected year as a range value
+								else if ($title === 'year')
+								{
+									$link = SEARCH_PAGE;
+									$link .= '&fwp_' . 'year' . '=' . $value . '%2C ' . $value;
+									$anchor =  '<a href="' . $link . '">' . $value . '</a>';
+								}
+								// Links back for the 'normal' facet fields
+								else
+								{
+									$anchor = create_anchor($title, $value);
+								}
+
+								// Display the link
+								if ($anchor)
 								{
 									echo '<a class="record-header">' . $field['label'] . '</a>';
 									echo '<p class="record-content">';
-
-									// Special case for the year facet: select only the selected year as a range value
-									if ($title === 'year')
-									{
-										$link = SEARCH_PAGE;
-										$link .= '&fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
-										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
-									}
-									// Links back for the 'normal' facet fields
-									else if (in_array($title, array('collection', 'journal')))
-									{
-										echo create_anchor($title, $field['value']);
-									}
-									// Links back for repeater facet fields
-									else if (is_array($field['value']))
-									{
-										$subs = array(
-											'authors'		=> 'author',
-											'languages'		=> 'language',
-											'people'		=> 'person',
-											'performances'	=> 'performance',
-										);
-										$anchors = array();
-										foreach($field['value'] as $sub)
-										{
-											$key = $subs[$title];
-											$value = $sub[$key];
-											array_push($anchors, create_anchor($key, $value));
-										}
-										echo implode(', ', $anchors);
-									}
-									else
-									{
-										echo $field['value'];
-									}
-									
+									echo $anchor;
 									echo '</p>';
 								}
 							}
 
 							// Display the keywords with a link back to the search page
-							$keywords = get_the_terms($post->ID , 'keyword');
-							if ($keywords)
+							$tags = get_the_terms($post->ID , 'post_tag');
+							if ($tags)
 							{
 								echo '<a class="record-header">Keywords</a>';
 								echo '<p class="record-content">';
 
 								$anchors = array();
-								foreach ($keywords as $keyword)
+								foreach ($tags as $tag)
 								{
-									array_push($anchors, create_anchor('keywords', $keyword->name));
+									array_push($anchors, create_anchor('keywords', $tag->name));
 								}
 								echo implode(', ', $anchors);
 

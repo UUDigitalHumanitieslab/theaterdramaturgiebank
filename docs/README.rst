@@ -38,7 +38,7 @@ Importing posts
 ===============
 You can import new posts (or update existing posts) by using the `WP All Import`_ plug-in. This plug-in allows for uploading .csv-files into WordPress. A .csv-file can be created from Microsoft Excel by using the *Save as...*-functionality.
 
-The plug-in can be accessed from the administration menu by clicking on *All Import*. Click *Manage imports* from the menu to view existing imports, and click one the available import to upload a new version of the file which contains all records. The importer will try to match each row of the import to an existing post by using the **key** field from the .csv-file.
+The plug-in can be accessed from the administration menu by clicking on *All Import*. Click *Manage imports* from the menu to view existing imports, and click one the available import to upload a new version of the file which contains all records. The importer will try to match each row of the import to an existing post by using the **key** field from the .csv-file. If there's no post with this key, the importer will create a new post.
 
 .. _`WP All Import`: http://www.wpallimport.com/
 
@@ -66,7 +66,7 @@ Make sure to fill out all required fields (marked by a red asterisk) and click t
 
 Adding a collection
 -------------------
-You can add collections via the *Posts* section of the dashboard. Create a new post by clicking the *Add New* button. In the right part of the window, select *Collection* as category. Make sure to use the **exact same title** that is used for records to be able to show records linked to a collection.
+You can add collections via the *Posts* section of the dashboard. Create a new post by clicking the *Add New* button. In the right part of the window, select *Collection* as category. Make sure to use the **exact same slug** that is used for records to be able to show records linked to a collection.
 
 Make sure to fill out all required fields (marked by a red asterisk) and click the blue *Publish* button to add the person to the website. You can also save a draft by clicking the grey *Save draft* button. 
 
@@ -99,7 +99,7 @@ Editing other content
 =====================
 About section on home page
 --------------------------
-You can edit the about page from the menu by navigating to *Pages* and then clicking the page titled *About (home)*.
+You can edit this section from the menu by navigating to *Pages* and then clicking the page titled *About (home)*.
 
 About page in menu 
 ------------------
@@ -107,7 +107,7 @@ You can edit the about page from the menu by navigating to *Pages* and then clic
  
 Contact page in menu 
 --------------------
-You can edit the about page from the menu by navigating to *Pages* and then clicking the page titled *Contact*.
+You can edit the contact page from the menu by navigating to *Pages* and then clicking the page titled *Contact*.
 
 Martijn van der Klis, `Digital Humanities Lab`_, 18 January 2017.
 

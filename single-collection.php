@@ -34,7 +34,7 @@ get_header(); ?>
 						'meta_query'		=> array(
 							array(
 								'key'		=> 'collection',
-								'value'		=> get_the_title(),
+								'value'		=> get_the_id(),
 								'compare'	=> '=',
 							)
 						),

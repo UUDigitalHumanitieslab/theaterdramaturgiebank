@@ -68,7 +68,7 @@ add_filter('single_template', create_function(
 // Display the ACF-fields with a link back to the search page
 function create_anchor($label, $value)
 {
-	$anchor = SEARCH_PAGE . '&fwp_' . strtolower($label);
+	$anchor = SEARCH_PAGE . '&fwp_' . $label;
 	$anchor .= '=' . sanitize_title_with_dashes($value);  // TODO: does not work for items with a '.'
 	return '<a href="' . $anchor . '">' . $value . '</a>';
 }

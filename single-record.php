@@ -60,16 +60,16 @@ get_header(); ?>
 									echo '<p class="record-content">';
 
 									// Special case for the year facet: select only the selected year as a range value
-									if ($field['label'] === 'Year')
+									if ($title === 'year')
 									{
 										$link = SEARCH_PAGE;
 										$link .= '&fwp_' . 'year' . '=' . $field['value'] . '%2C ' . $field['value'];
 										echo '<a href="' . $link . '">' . $field['value'] . '</a>';
 									}
 									// Links back for the 'normal' facet fields
-									else if (in_array($field['label'], array('Collection', 'Journal')))
+									else if (in_array($title, array('collection', 'journal')))
 									{
-										echo create_anchor($field['label'], $field['value']);
+										echo create_anchor($title, $field['value']);
 									}
 									// Links back for repeater facet fields
 									else if (is_array($field['value']))
@@ -83,7 +83,7 @@ get_header(); ?>
 										$anchors = array();
 										foreach($field['value'] as $sub)
 										{
-											$key = $subs[strtolower($field['label'])];
+											$key = $subs[$title];
 											$value = $sub[$key];
 											array_push($anchors, create_anchor($key, $value));
 										}

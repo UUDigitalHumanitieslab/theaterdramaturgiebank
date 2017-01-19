@@ -49,7 +49,7 @@ get_header(); ?>
 					<div class="col-sm-3 record-sidebar">
 						<?php
 							// Display the custom fields, with a link back to the faceted search
-							$not_shown = array('bibliography', 'full-text');  // List of fields not displayed
+							$not_shown = array('key', 'bibliography', 'full-text');  // List of fields not displayed
 							$fields = get_field_objects();
 							ksort($fields);
 							foreach ($fields as $title => $field)

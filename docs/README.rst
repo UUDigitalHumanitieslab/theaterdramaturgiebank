@@ -27,11 +27,12 @@ You can add users by navigating to *Users -> Add user*. You can use Solis-ID's i
 
 Searching
 =========
-The database can be searched using the faceted search provided by FacetWP_. You can change some of the facet settings in the *Settings -> FacetWP* administration menu item (tab *Facets*). You can e.g. change the number of items shown per facet. 
+The database can be searched using the faceted search provided by FacetWP_. You can change some of the facet settings in the *Settings -> FacetWP* administration menu item (tab *Facets*). You can e.g. change the number of items shown for the facet 'Author' by clicking on it and changing the values for the *Count* and *Soft limit* fields. Full documentation can be found on `the FacetWP website`_.
 
 Note that the database will be automatically re-indexed after updating a post. If you would want to a manual re-index, you can do that by clicking the (white) *Re-index* button in the *Settings -> FacetWP* administration menu item (tab *Facets*).
 
 .. _FacetWP: https://facetwp.com/
+.. _`the FacetWP website`: https://facetwp.com/documentation/
 
 Importing posts
 ===============

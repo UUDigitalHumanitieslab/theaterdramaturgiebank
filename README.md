@@ -18,7 +18,7 @@ Below is a breakdown of the function of each file in this repository:
 * `header.php`: Custom header, removed the site title.
 * `index.php`: Customized front page, displaying a search form and a random post with the 'Record' category.
 * `page-authors.php`: Page for displaying all authors in an alphabetical listing.
-* `page-keywords.php`: Page for displaying all keywords in an alphabetical listing.
+* `page-keywords.php`: Page for displaying all tags in an alphabetical listing.
 * `single-collection.php`: Template for displaying a single post with the 'Collection' category.
 * `single-person.php`: Template for displaying a single post with the 'Person' category.
 * `single-record.php`: Template for displaying a single post with the 'Record' category.

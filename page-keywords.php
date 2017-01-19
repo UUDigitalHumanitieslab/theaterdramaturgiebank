@@ -3,7 +3,7 @@
  * The template for displaying the page with the slug "keywords".
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * This page will output all terms of the taxonomy "keyword" as a alphabetical listing.
+ * This page will output all terms of the taxonomy "post_tag" as a alphabetical listing.
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 <div class="listing">
 	<ul>
 	<?php
-		$terms = get_terms(array('taxonomy' => 'keyword', 'hide_empty' => FALSE));
+		$terms = get_terms(array('taxonomy' => 'post_tag', 'hide_empty' => FALSE));
 		$current_first = '';
 		foreach ($terms as $term)
 		{

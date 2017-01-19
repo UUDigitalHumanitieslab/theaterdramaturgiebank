@@ -10,9 +10,14 @@ get_header(); ?>
 
 <?php get_template_part('parts/page-header-1col'); ?> 
 	<div class="home-blog">
-		<p class="lead">
-			TheaterDramaturgie.Bank (intro text here)
-		</p>
+		<?php
+			// Retrieve and display the content of the "About (home)" page
+			$page = get_page_by_title('About (home)');
+			if ($page)
+			{
+				echo apply_filters('the_content', $page->post_content);
+			}
+		?>
 		<div class="row">
 			
 			<div id="home_search" class="col-sm-6">

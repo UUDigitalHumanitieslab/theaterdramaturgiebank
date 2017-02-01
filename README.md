@@ -12,6 +12,8 @@ Below is a breakdown of the function of each file in this repository:
   * `colofon.php`: Customization of the bottom bar. Removed most items, only displays the Digital Humanities lab logo.
   * `record-loop.php`: Functionality for looping over a post with the 'Record' category. Referenced from `category-record.php`.
   * `record-random.php`: Functionality for looping over a post with the 'Record' category on the front page. References from `index.php`.
+* libraries: Contains external libraries.
+  * `Parsedown.php`: Markdown parser in PHP. Retrieved from https://github.com/erusev/parsedown.
 * `category-collection.php`: Template for displaying a list of posts with the 'Collection' category.
 * `category-record.php`: Template for displaying a list of posts with the 'Record' category.
 * `functions.php`: Specific functions for this template.

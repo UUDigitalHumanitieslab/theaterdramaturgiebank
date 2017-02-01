@@ -28,6 +28,19 @@ add_filter('single_template', create_function(
 	return $the_template;' )
 );
 
+// On save, set the full-text to TRUE iff the post has content
+function my_save_post($post_id)
+{
+	$has_content = (bool) get_post_field('post_content', $post_id);
+	update_field('full-text', $has_content, $post_id);
+}
+
+add_action('save_post', 'my_save_post');
+
+/*********************/
+/* Facet WP
+/*********************/
+
 // Display the ACF-fields with a link back to the search page
 function create_anchor($field, $value, $label = NULL)
 {
@@ -105,13 +118,17 @@ function my_facetwp_sort_options($options, $params)
 
 add_filter('facetwp_sort_options', 'my_facetwp_sort_options', 10, 2);
 
-// On save, set the full-text to TRUE iff the post has content
-function my_save_post($post_id)
-{
-	$has_content = (bool) get_post_field('post_content', $post_id);
-	update_field('full-text', $has_content, $post_id);
-}
+/*********************/
+/* WP All Import
+/*********************/
 
-add_action('save_post', 'my_save_post');
+require 'libraries/Parsedown.php';
+
+// Uses Parsedown to convert Markdown to HTML. See https://github.com/erusev/parsedown for details. Used in WP All Import.
+function markdown_to_html($str)
+{
+	$Parsedown = new Parsedown();
+	return $Parsedown->text($str);
+}
 
 ?>

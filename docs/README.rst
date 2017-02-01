@@ -40,7 +40,11 @@ You can import new posts (or update existing posts) by using the `WP All Import`
 
 The plug-in can be accessed from the administration menu by clicking on *All Import*. Click *Manage imports* from the menu to view existing imports, and click one the available import to upload a new version of the file which contains all records. The importer will try to match each row of the import to an existing post by using the **key** field from the .csv-file. If there's no post with this key, the importer will create a new post.
 
+In the bibliography field, you can use `Markdown`_ to format content (e.g. bold/italic font). This will be converted to HTML during import (using the `Parsedown`_ parser).
+
 .. _`WP All Import`: http://www.wpallimport.com/
+.. _Markdown: https://en.wikipedia.org/wiki/Markdown
+.. _Parsedown: https://github.com/erusev/parsedown
 
 Editing posts
 =============

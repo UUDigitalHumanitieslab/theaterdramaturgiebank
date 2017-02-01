@@ -97,9 +97,6 @@ If you would like to add videos to a post, you can use the *embed shortcode* for
 
 Editing other content
 =====================
-About section on home page
---------------------------
-You can edit this section from the menu by navigating to *Pages* and then clicking the page titled *About (home)*.
 
 About page in menu 
 ------------------

@@ -36,13 +36,25 @@ get_header(); ?>
 							</div>
 						<?php } ?>
 
+						<!-- Download (if available) -->
+						<?php if (get_field('file')) { ?>
+							<h2>
+								Original document
+							</h2>
+							<p>
+								<a href="<?php echo get_field('file')['url']; ?>" target="_blank">
+									<?php echo get_field('file')['filename']; ?>
+								</a>
+							</p>
+						<?php } ?>
+
 						<!-- Bibliography (if available) -->
 						<?php if (get_field('bibliography')) { ?>
 							<h2>
 								Bibliography
 							</h2>
 							<p>
-								<?php the_field('bibliography'); ?>
+								<?php var_dump(the_field('bibliography')); ?>
 							</p>
 						<?php } ?>
 					</div>
@@ -56,7 +68,7 @@ get_header(); ?>
 								$value = $field['value'];
 
 								// Don't display fields without a value, or fields that are displayed/used elsewhere
-								if (!$value || in_array($title, array('key', 'bibliography', 'full-text')))
+								if (!$value || in_array($title, array('key', 'bibliography', 'full-text', 'file')))
 								{
 									continue;
 								}

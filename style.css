@@ -235,28 +235,28 @@ Domain Path: /languages/
  * Custom-colored navbar
  */
 .navbar-inverse {
-    background-color: #efefef;
+	background-color: #bbbbbb;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > li.current-menu-item > a, .navbar-inverse .navbar-nav > li.current-menu-parent > a {
 	font-weight: bold;
-    color: #111111;
+	color: #000000;
 	background-color: #bbbbbb;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #444444;
+	color: #000000;
 }
 
 .current-menu-item .home-icon, .home-icon, .home-icon:hover {
-    fill: #111111 !important;
+	fill: #ffcd00 !important;
 }
 
 /**
  * Give colophon grey background, no padding for footer image
  */
 #colophon {
-	background-color: #efefef;
+	background-color: #bbbbbb;
 	padding: 14px;
 }
 

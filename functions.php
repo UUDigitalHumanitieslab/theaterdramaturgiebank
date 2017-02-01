@@ -68,4 +68,13 @@ function my_facetwp_sort_options($options, $params)
 
 add_filter('facetwp_sort_options', 'my_facetwp_sort_options', 10, 2);
 
+// On save, set the full-text to TRUE iff the post has content
+function my_save_post($post_id)
+{
+	$has_content = (bool) get_post_field('post_content', $post_id);
+	update_field('full-text', $has_content, $post_id);
+}
+
+add_action('save_post', 'my_save_post');
+
 ?>

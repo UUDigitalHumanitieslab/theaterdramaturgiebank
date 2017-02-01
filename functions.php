@@ -41,6 +41,37 @@ function create_anchor($field, $value, $label = NULL)
 	return '<a href="' . $anchor . '">' . $label . '</a>';
 }
 
+// Display the link back to the search page for repeater fields (viz. authors, languages, people, performances)
+function create_repeater_anchor($field, $value)
+{
+	$subs = array(
+		'authors'		=> 'author',
+		'languages'		=> 'language',
+		'people'		=> 'person',
+		'performances'	=> 'performance',
+	);
+	$anchors = array();
+	foreach ($value as $sub)
+	{
+		$s_key = $subs[$field];
+		$s_value = $sub[$s_key];
+		if ($s_value)
+		{
+			array_push($anchors, create_anchor($s_key, $s_value));
+		}
+	}
+	
+	return implode(', ', $anchors);
+}
+
+// Display the link back for years using the min-max notation
+function create_year_anchor($field, $value)
+{
+	$link = SEARCH_PAGE;
+	$link .= '&fwp_' . $field . '=' . $value . '%2C ' . $value;
+	return '<a href="' . $link . '">' . $value . '</a>';
+}
+
 // Add sorting on year, remove sorting on date
 function my_facetwp_sort_options($options, $params)
 {

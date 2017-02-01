@@ -83,30 +83,12 @@ get_header(); ?>
 								// Special case for repeater facet fields
 								else if (is_array($value))
 								{
-									$subs = array(
-										'authors'		=> 'author',
-										'languages'		=> 'language',
-										'people'		=> 'person',
-										'performances'	=> 'performance',
-									);
-									$anchors = array();
-									foreach ($value as $sub)
-									{
-										$s_key = $subs[$title];
-										$s_value = $sub[$s_key];
-										if ($s_value)
-										{
-											array_push($anchors, create_anchor($s_key, $s_value));
-										}
-									}
-									$anchor = implode(', ', $anchors);
+									$anchor = create_repeater_anchor($title, $value);
 								}
 								// Special case for the year facet: select only the selected year as a range value
 								else if ($title === 'year')
 								{
-									$link = SEARCH_PAGE;
-									$link .= '&fwp_' . 'year' . '=' . $value . '%2C ' . $value;
-									$anchor =  '<a href="' . $link . '">' . $value . '</a>';
+									$anchor = create_year_anchor($title, $value);
 								}
 								// Links back for the 'normal' facet fields
 								else

@@ -16,15 +16,15 @@ get_header(); ?>
 					<div class="collection-image pull-left">
 						<?php the_post_thumbnail('full', array('class' => 'img-responsive img-thumbnail')); ?>
 					</div>
-					<h1>
+					<h2>
 						<?php the_title(); ?>
-					</h1>
+					</h2>
 					
 					<?php the_content(); ?>
 
-					<h2>
+					<h3>
 						Linked records
-					</h2>
+					</h3>
 
 					<?php
 					// Find posts with category record and having collection the current collection, and order by name

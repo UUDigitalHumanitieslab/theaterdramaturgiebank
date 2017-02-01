@@ -22,9 +22,9 @@ get_header(); ?>
 						</div>
 
 						<!-- Article title -->
-						<h1>
+						<h2>
 							<?php the_title(); ?>
-						</h1>
+						</h2>
 
 						<!-- Article content (excerpt + content) -->
 						<?php the_excerpt(); ?>
@@ -38,9 +38,9 @@ get_header(); ?>
 
 						<!-- Bibliography (if available) -->
 						<?php if (get_field('bibliography')) { ?>
-							<h1>
+							<h2>
 								Bibliography
-							</h1>
+							</h2>
 							<p>
 								<?php the_field('bibliography'); ?>
 							</p>

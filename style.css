@@ -10,6 +10,40 @@ Text Domain: uu2014
 Domain Path: /languages/
 */
 
+
+/**
+ * Choosing smaller font sizes all around the theme,
+ * and using normal line height, smaller margins and bold fonts for headers.
+ */
+h2, h3 {
+	font-weight: bold;
+	margin: .5em 0 .5em 0;
+	line-height: normal;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+	line-height: normal;
+}
+
+/**
+ * Overriding the defaults for the home blog h2 using the settings above
+ */
+.home-blog h2 {
+	font-weight: bold;
+	margin: .5em 0 .5em 0;
+	line-height: normal;
+	font-size: 24px;
+}
+
 /**
  * Move the blog name up a bit, and set the correct color
  */
@@ -49,30 +83,6 @@ Domain Path: /languages/
 
 #records a {
 	text-decoration: none;
-}
-
-/**
- * Specifics for record/collection/person main content:
- * - Smaller font
- * - Smaller margins/line-height for title
- */
-.record-main h1, .collection-main h1, .person-main h1,
-.record-main h2, .collection-main h2, .person-main h2 {
-	font-weight: bold;
-	margin: .5em 0 .5em 0;
-	line-height: normal;
-}
-
-.record-main h1, .collection-main h1, .person-main h1 {
-	font-size: 24px;
-}
-
-.record-main h2, .collection-main h2, .person-main h2 {
-	font-size: 20px;
-}
-
-.record-main p, .collection-main p, .person-main p {
-	font-size: 16px;
 }
 
 /**
@@ -185,7 +195,7 @@ Domain Path: /languages/
 }
 
 .listing, .listing li {
-	font-size: 18px;
+	font-size: 14px;
 	line-height: normal;
 	list-style-type: none;
 }
@@ -204,7 +214,7 @@ Domain Path: /languages/
 #home_search_form .searchfield {
 	background: none repeat scroll 0 0 #efefef;
 	border: 0 none;
-	font-size: 18px;
+	font-size: 16px;
 	height: 40px;
 	outline: medium none;
 	padding-left: 10px;

@@ -18,9 +18,9 @@ get_header(); ?>
 					<div class="person-image pull-left">
 						<?php the_post_thumbnail('full', array('class' => 'img-responsive img-thumbnail')); ?>
 					</div>
-					<h1>
+					<h2>
 						<?php the_title(); ?>
-					</h1>
+					</h2>
 
 					<?php the_content(); ?>
 

@@ -73,22 +73,22 @@ get_header(); ?>
 									continue;
 								}
 
-								// Retrieve the link back to the search page
+								// Retrieve the link back to the search page (or post in case of collections)
 								$anchor = '';
-								// Special case for objects (linked posts)
-								if (is_object($value))
+								// Special case for collections (linked posts): show the link to the post
+								if ($title === 'collection')
 								{
-									$anchor = create_anchor($title, $value->ID, $value->post_title);
-								}
-								// Special case for repeater facet fields
-								else if (is_array($value))
-								{
-									$anchor = create_repeater_anchor($title, $value);
+									$anchor = create_collection_anchor($title, $value);
 								}
 								// Special case for the year facet: select only the selected year as a range value
 								else if ($title === 'year')
 								{
 									$anchor = create_year_anchor($title, $value);
+								}
+								// Special case for repeater facet fields
+								else if (is_array($value))
+								{
+									$anchor = create_repeater_anchor($title, $value);
 								}
 								// Links back for the 'normal' facet fields
 								else

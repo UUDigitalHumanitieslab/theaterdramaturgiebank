@@ -72,6 +72,12 @@ function create_year_anchor($field, $value)
 	return '<a href="' . $link . '">' . $value . '</a>';
 }
 
+// For collections, display a link to the individual post
+function create_collection_anchor($field, $value)
+{
+	return '<a href="' . get_permalink($value->ID) . '">' . $value->post_title . '</a>';
+}
+
 // Add sorting on year, remove sorting on date
 function my_facetwp_sort_options($options, $params)
 {

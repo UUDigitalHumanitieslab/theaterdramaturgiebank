@@ -253,9 +253,13 @@ Domain Path: /languages/
 }
 
 /**
- * Give colophon grey background.
+ * Give colophon grey background, no padding for footer image
  */
 #colophon {
 	background-color: #efefef;
 	padding: 14px;
+}
+
+#colophon .footer-img {
+	padding: 0px;
 }

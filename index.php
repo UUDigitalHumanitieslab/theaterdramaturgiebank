@@ -27,8 +27,12 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<div id="home_random" class="col-sm-6">
-				<h2>Random record</h2>
+			<div class="col-sm-3">
+				<!-- White space -->
+			</div>
+
+			<div id="home_random" class="col-sm-3">
+				<h2>What's in?</h2>
 
 				<div>
 					<?php

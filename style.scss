@@ -13,6 +13,7 @@ Domain Path: /languages/
 // UU corporate style colors used throughout the template
 $UUblack: #000000;
 $UUgrey: #bbbbbb;
+$UUlightgrey: #efefef;
 $UUred: #C00A35;
 $UUyellow: #ffcd00;
 
@@ -106,7 +107,7 @@ p {
  */
 .record-sidebar {
 	font-size: 14px;
-	background-color: $UUgrey;
+	background-color: $UUlightgrey;
 
 	.record-header {
 		margin-top: 1em;
@@ -140,7 +141,7 @@ p {
 .facetwp-pager {
 	.facetwp-page {
 		font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
-		background: $UUgrey;
+		background: $UUlightgrey;
 		display: inline-block;
 		height: 40px;
 		width: 40px;
@@ -156,7 +157,7 @@ p {
 	}
 
 	.facetwp-page.first-page, .facetwp-page.last-page {
-		background-color: black;
+		background-color: $UUgrey;
 		color: white;
 	}
 
@@ -228,7 +229,7 @@ p {
  */
 #home_search_form {
 	.searchfield {
-		background: none repeat scroll 0 0 #efefef;
+		background: none repeat scroll 0 0 $UUlightgrey;
 		border: 0 none;
 		font-size: 16px;
 		height: 40px;
@@ -255,7 +256,7 @@ p {
  * Grey background for the random record, and somewhat more padding
  */
 #home_random {
-	background: $UUgrey;
+	background: $UUlightgrey;
 	padding: 20px;
 }
 

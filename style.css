@@ -82,7 +82,7 @@ p {
  */
 .record-sidebar {
   font-size: 14px;
-  background-color: #bbbbbb; }
+  background-color: #efefef; }
   .record-sidebar .record-header {
     margin-top: 1em;
     border-bottom: 1px solid #C00A35;
@@ -107,7 +107,7 @@ p {
 
 .facetwp-pager .facetwp-page {
   font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
-  background: #bbbbbb;
+  background: #efefef;
   display: inline-block;
   height: 40px;
   width: 40px;
@@ -119,7 +119,7 @@ p {
 .facetwp-pager .facetwp-page.active {
   background-color: #ffcd00; }
 .facetwp-pager .facetwp-page.first-page, .facetwp-pager .facetwp-page.last-page {
-  background-color: black;
+  background-color: #bbbbbb;
   color: white; }
 .facetwp-pager .facetwp-pager-label {
   display: none; }
@@ -193,10 +193,10 @@ p {
   text-decoration: underline; }
 
 /**
- * Grey background for the random record
+ * Grey background for the random record, and somewhat more padding
  */
 #home_random {
-  background: #bbbbbb;
+  background: #efefef;
   padding: 20px; }
 
 /**

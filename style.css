@@ -64,12 +64,13 @@ p {
 
 /**
  * Specifics for record table:
- * - Smaller font size
+ * - Smaller font size and no top margin
  * - Showing the table labels on the left by default 
  * - No list styling
  */
 #records {
 	font-size: 14px;
+	margin-top: 0px;
 }
 
 #records th {
@@ -100,7 +101,7 @@ p {
  */
 .record-sidebar {
 	font-size: 14px;
-	background-color: #efefef;
+	background-color: #bbbbbb;
 }
 
 .record-sidebar .record-header {
@@ -133,7 +134,7 @@ p {
 
 .facetwp-pager .facetwp-page {
 	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
-	background: #efefef;
+	background: #bbbbbb;
 	display: inline-block;
 	height: 40px;
 	width: 40px;
@@ -238,7 +239,7 @@ p {
  * Grey background for the random record
  */
 #home_random {
-	background: #efefef;
+	background: #bbbbbb;
 }
 
 /**

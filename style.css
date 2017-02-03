@@ -9,58 +9,47 @@ Version: 1.0-wpcom
 Text Domain: uu2014
 Domain Path: /languages/
 */
-
-
 /**
  * Choosing smaller font sizes all around the theme,
  * and using normal line height, smaller margins and bold fonts for headers.
  */
 h2, h3 {
-	font-weight: bold;
-	margin: .5em 0 .5em 0;
-	line-height: normal;
-}
+  font-weight: bold;
+  margin: .5em 0 .5em 0;
+  line-height: normal; }
 
 h2 {
-	font-size: 24px;
-}
+  font-size: 24px; }
 
 h3 {
-	font-size: 16px;
-}
+  font-size: 16px; }
 
 p {
-	font-size: 14px;
-	line-height: normal;
-}
+  font-size: 14px;
+  line-height: normal; }
 
 /**
  * Overriding the defaults for the home blog h2 using the settings above
  */
 .home-blog h2 {
-	font-weight: bold;
-	margin: .5em 0 .5em 0;
-	line-height: normal;
-	font-size: 24px;
-}
+  font-weight: bold;
+  margin: .5em 0 .5em 0;
+  line-height: normal;
+  font-size: 24px; }
 
 /**
  * Move the blog name up a bit, and set the correct color
  */
 .blog-name {
-	margin-top: -10px;
-}
-
-.blog-name a {
-	color: #C00A35;
-}
+  margin-top: -10px; }
+  .blog-name a {
+    color: #C00A35; }
 
 /**
  * Removing the header image and page title
  */
 #content .header-image, .page-title {
-	display: none;
-}
+  display: none; }
 
 /**
  * Specifics for record table:
@@ -69,29 +58,21 @@ p {
  * - No list styling
  */
 #records {
-	font-size: 14px;
-	margin-top: 0px;
-}
-
-#records th {
-	text-align: left;
-}
-
-#records ul {
-	list-style-type: none;
-	margin: 0;
-}
-
-#records a {
-	text-decoration: none;
-}
+  font-size: 14px;
+  margin-top: 0px; }
+  #records th {
+    text-align: left; }
+  #records ul {
+    list-style-type: none;
+    margin: 0; }
+  #records a {
+    text-decoration: none; }
 
 /**
  * Margin for the record/collection/person image.
  */
 .record-image, .collection-image, .person-image {
-	margin-right: 10px;
-}
+  margin-right: 10px; }
 
 /**
  * Specifics for record sidebar: 
@@ -100,24 +81,17 @@ p {
  * - Anchors not underlined
  */
 .record-sidebar {
-	font-size: 14px;
-	background-color: #bbbbbb;
-}
-
-.record-sidebar .record-header {
-	margin-top: 1em;
-	border-bottom: 1px solid #C00A35;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-.record-sidebar .record-content {
-	line-height: normal;
-}
-
-.record-content a {
-	text-decoration: none;
-}
+  font-size: 14px;
+  background-color: #bbbbbb; }
+  .record-sidebar .record-header {
+    margin-top: 1em;
+    border-bottom: 1px solid #C00A35;
+    text-decoration: none;
+    font-weight: bold; }
+  .record-sidebar .record-content {
+    line-height: normal; }
+    .record-sidebar .record-content a {
+      text-decoration: none; }
 
 /**
  * Mimicking the UU-pager behavior:
@@ -127,83 +101,70 @@ p {
  * - Sorting inline
  */
 #records_pager {
-	text-align: center;
-	border-top: 1px solid #000000;
-	font-size: 14px;
-}
+  text-align: center;
+  border-top: 1px solid #000000;
+  font-size: 14px; }
 
 .facetwp-pager .facetwp-page {
-	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
-	background: #bbbbbb;
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	line-height: 40px;
-	color: black;
-	text-decoration: none;
-	margin: 0 5px;
-	text-align: center;
-}
-
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  background: #bbbbbb;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+  text-align: center; }
 .facetwp-pager .facetwp-page.active {
-	background-color: #ffcd00;
-}
-
-.facetwp-pager .facetwp-page.first-page, #records_pager .facetwp-page.last-page {
-	background-color: black;
-	color: white;
-}
-
+  background-color: #ffcd00; }
+.facetwp-pager .facetwp-page.first-page, .facetwp-pager .facetwp-page.last-page {
+  background-color: black;
+  color: white; }
 .facetwp-pager .facetwp-pager-label {
-	display: none;
-}
+  display: none; }
 
 .facetwp-sort {
-	display: inline;
-}
+  display: inline; }
 
 /**
  * Smaller font size for facets, normal line-height and less margin
- */ 
+ */
 .facetwp-facet {
-	font-size: 14px;
-	line-height: normal;
-	margin-bottom: 10px !important;
-}
+  font-size: 14px;
+  line-height: normal;
+  margin-bottom: 10px !important; }
 
 /**
  * Smaller inputs for number range facets
  */
 .facetwp-type-number_range input {
-	width: 70px;
-	margin: 0px 5px 0px 10px;
-}
+  width: 70px;
+  margin: 0px 5px 0px 10px; }
 
 /**
  * Toggles in italic
- */ 
+ */
 .facetwp-toggle {
-	font-style: italic;
-}
+  font-style: italic; }
 
 /**
  * Alphabetical listing page styling: 3 columns, no bullets
  */
-.listing ul {
-	columns: 3;
-	-webkit-columns: 3;
-	-moz-columns: 3;
-}
-
-.listing, .listing li {
-	font-size: 14px;
-	line-height: normal;
-	list-style-type: none;
-}
-
-.listing h3 {
-	margin: 10px 0px 5px 0px;
-}
+.listing {
+  font-size: 14px;
+  line-height: normal;
+  list-style-type: none; }
+  .listing ul {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3; }
+  .listing li {
+    font-size: 14px;
+    line-height: normal;
+    list-style-type: none; }
+  .listing h3 {
+    margin: 10px 0px 5px 0px; }
 
 /**
  * Mimicking the UU-search behavior, but:
@@ -213,64 +174,54 @@ p {
  * - Anchors underlined
  */
 #home_search_form .searchfield {
-	background: none repeat scroll 0 0 #efefef;
-	border: 0 none;
-	font-size: 16px;
-	height: 40px;
-	outline: medium none;
-	padding-left: 10px;
-	padding-right: 40px;
-	color: #3b3b3b;
-	text-decoration: none;
-	line-height: 30px;
-}
-
+  background: none repeat scroll 0 0 #efefef;
+  border: 0 none;
+  font-size: 16px;
+  height: 40px;
+  outline: medium none;
+  padding-left: 10px;
+  padding-right: 40px;
+  color: #3b3b3b;
+  text-decoration: none;
+  line-height: 30px; }
 #home_search_form .searchbutton {
-	position: relative;
-	left: -35px;
-	font-size: 18px;
-}
+  position: relative;
+  left: -35px;
+  font-size: 18px; }
 
 #home_search a {
-	text-decoration: underline;
-}
+  text-decoration: underline; }
 
 /**
  * Grey background for the random record
  */
 #home_random {
-	background: #bbbbbb;
-}
+  background: #bbbbbb; }
 
 /**
  * Custom-colored navbar
  */
 .navbar-inverse {
-	background-color: #bbbbbb;
-}
+  background-color: #bbbbbb; }
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > li.current-menu-item > a, .navbar-inverse .navbar-nav > li.current-menu-parent > a {
-	font-weight: bold;
-	color: #000000;
-	background-color: #bbbbbb;
-}
+  font-weight: bold;
+  color: #000000;
+  background-color: #bbbbbb; }
 
 .navbar-inverse .navbar-nav > li > a {
-	color: #000000;
-}
+  color: #000000; }
 
 .current-menu-item .home-icon, .home-icon, .home-icon:hover {
-	fill: #ffcd00 !important;
-}
+  fill: #ffcd00 !important; }
 
 /**
  * Give colophon grey background, no padding for footer image
  */
 #colophon {
-	background-color: #bbbbbb;
-	padding: 14px;
-}
+  background-color: #bbbbbb;
+  padding: 14px; }
+  #colophon .footer-img {
+    padding: 0px; }
 
-#colophon .footer-img {
-	padding: 0px;
-}
+/*# sourceMappingURL=style.css.map */

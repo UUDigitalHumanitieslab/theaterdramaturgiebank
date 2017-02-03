@@ -1,0 +1,292 @@
+/*
+Theme Name: TheaterDramaturgie.Bank
+Theme URI: https://github.com/UUDigitalHumanitieslab/theaterdramaturgiebank
+Author: Martijn van der Klis, Digital Humanities lab
+Author URI: http://dig.hum.uu.nl/
+Description: uu2014 childtheme for theaterdramaturgiebank.sites.uu.nl
+template: UU2014
+Version: 1.0-wpcom
+Text Domain: uu2014
+Domain Path: /languages/
+*/
+
+// UU corporate style colors used throughout the template
+$UUblack: #000000;
+$UUgrey: #bbbbbb;
+$UUred: #C00A35;
+$UUyellow: #ffcd00;
+
+/**
+ * Choosing smaller font sizes all around the theme,
+ * and using normal line height, smaller margins and bold fonts for headers.
+ */
+h2, h3 {
+	font-weight: bold;
+	margin: .5em 0 .5em 0;
+	line-height: normal;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+	line-height: normal;
+}
+
+/**
+ * Overriding the defaults for the home blog h2 using the settings above
+ */
+.home-blog h2 {
+	font-weight: bold;
+	margin: .5em 0 .5em 0;
+	line-height: normal;
+	font-size: 24px;
+}
+
+/**
+ * Move the blog name up a bit, and set the correct color
+ */
+.blog-name {
+	margin-top: -10px;
+
+	a {
+		color: $UUred;
+	}
+}
+
+/**
+ * Removing the header image and page title
+ */
+#content .header-image, .page-title {
+	display: none;
+}
+
+/**
+ * Specifics for record table:
+ * - Smaller font size and no top margin
+ * - Showing the table labels on the left by default 
+ * - No list styling
+ */
+#records {
+	font-size: 14px;
+	margin-top: 0px;
+
+	th {
+		text-align: left;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+/**
+ * Margin for the record/collection/person image.
+ */
+.record-image, .collection-image, .person-image {
+	margin-right: 10px;
+}
+
+/**
+ * Specifics for record sidebar: 
+ * - Underlined headers in details
+ * - Smaller text in details
+ * - Anchors not underlined
+ */
+.record-sidebar {
+	font-size: 14px;
+	background-color: $UUgrey;
+
+	.record-header {
+		margin-top: 1em;
+		border-bottom: 1px solid $UUred;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.record-content {
+		line-height: normal;
+		
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+/**
+ * Mimicking the UU-pager behavior:
+ * - Display pagination as blocks
+ * - Active page is yellow
+ * - Don't display number of pages
+ * - Sorting inline
+ */
+#records_pager {
+	text-align: center;
+	border-top: 1px solid $UUblack;
+	font-size: 14px;
+}
+
+.facetwp-pager {
+	.facetwp-page {
+		font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+		background: $UUgrey;
+		display: inline-block;
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		color: black;
+		text-decoration: none;
+		margin: 0 5px;
+		text-align: center;
+	}
+
+	.facetwp-page.active {
+		background-color: $UUyellow;
+	}
+
+	.facetwp-page.first-page, .facetwp-page.last-page {
+		background-color: black;
+		color: white;
+	}
+
+	.facetwp-pager-label {
+		display: none;
+	}
+}
+
+.facetwp-sort {
+	display: inline;
+}
+
+/**
+ * Smaller font size for facets, normal line-height and less margin
+ */ 
+.facetwp-facet {
+	font-size: 14px;
+	line-height: normal;
+	margin-bottom: 10px !important;
+}
+
+/**
+ * Smaller inputs for number range facets
+ */
+.facetwp-type-number_range input {
+	width: 70px;
+	margin: 0px 5px 0px 10px;
+}
+
+/**
+ * Toggles in italic
+ */ 
+.facetwp-toggle {
+	font-style: italic;
+}
+
+/**
+ * Alphabetical listing page styling: 3 columns, no bullets
+ */
+.listing {
+	font-size: 14px;
+	line-height: normal;
+	list-style-type: none;
+
+	ul {
+		columns: 3;
+		-webkit-columns: 3;
+		-moz-columns: 3;
+	}
+
+	li {
+		font-size: 14px;
+		line-height: normal;
+		list-style-type: none;
+	}
+
+	h3 {
+		margin: 10px 0px 5px 0px;
+	}
+
+}
+
+/**
+ * Mimicking the UU-search behavior, but:
+ * - No fixed position, relative instead
+ * - Bigger font size
+ * Also:
+ * - Anchors underlined
+ */
+#home_search_form {
+	.searchfield {
+		background: none repeat scroll 0 0 #efefef;
+		border: 0 none;
+		font-size: 16px;
+		height: 40px;
+		outline: medium none;
+		padding-left: 10px;
+		padding-right: 40px;
+		color: #3b3b3b;
+		text-decoration: none;
+		line-height: 30px;
+	}
+
+	.searchbutton {
+		position: relative;
+		left: -35px;
+		font-size: 18px;
+	}
+}
+
+#home_search a {
+	text-decoration: underline;
+}
+
+/**
+ * Grey background for the random record
+ */
+#home_random {
+	background: $UUgrey;
+}
+
+/**
+ * Custom-colored navbar
+ */
+.navbar-inverse {
+	background-color: $UUgrey;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > li.current-menu-item > a, .navbar-inverse .navbar-nav > li.current-menu-parent > a {
+	font-weight: bold;
+	color: $UUblack;
+	background-color: $UUgrey;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: $UUblack;
+}
+
+.current-menu-item .home-icon, .home-icon, .home-icon:hover {
+	fill: $UUyellow !important;
+}
+
+/**
+ * Give colophon grey background, no padding for footer image
+ */
+#colophon {
+	background-color: $UUgrey;
+	padding: 14px;
+
+	.footer-img {
+		padding: 0px;
+	}
+}

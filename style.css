@@ -196,7 +196,8 @@ p {
  * Grey background for the random record
  */
 #home_random {
-  background: #bbbbbb; }
+  background: #bbbbbb;
+  padding: 20px; }
 
 /**
  * Custom-colored navbar

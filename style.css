@@ -60,7 +60,10 @@ p {
 #records {
   font-size: 14px;
   margin-top: 0px; }
+  #records tbody > tr:nth-of-type(odd) {
+    background-color: #efefef; }
   #records th {
+    font-size: 16px;
     text-align: left; }
   #records ul {
     list-style-type: none;

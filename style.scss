@@ -71,14 +71,21 @@ p {
 /**
  * Specifics for record table:
  * - Smaller font size and no top margin
- * - Showing the table labels on the left by default 
+ * - Grey background for odd rows
+ * - Somewhat bigger header font size and left alignment
  * - No list styling
+ * - No underline for links
  */
 #records {
 	font-size: 14px;
 	margin-top: 0px;
 
+	tbody > tr:nth-of-type(odd) {
+		background-color: $UUlightgrey;
+	}
+
 	th {
+		font-size: 16px;
 		text-align: left;
 	}
 

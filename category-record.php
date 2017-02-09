@@ -55,8 +55,6 @@ get_header(); ?>
 				<?php echo facetwp_display('facet', 'person'); ?>
 				<a class="record-header">Performances</a>
 				<?php echo facetwp_display('facet', 'performance'); ?>
-				<a class="record-header">Journal</a>
-				<?php echo facetwp_display('facet', 'journal'); ?>
 				<a class="record-header">Has full-text?</a>
 				<?php echo facetwp_display('facet', 'full-text'); ?>
 				<a class="record-header">Keywords</a>

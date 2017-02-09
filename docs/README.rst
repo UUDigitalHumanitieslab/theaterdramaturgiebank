@@ -60,7 +60,6 @@ Normally, records are created during import (see the previous section), but if n
 - People
 - Performance(s)
 - Issue
-- Journal
 - Original publication
 - Publisher
 - Bibliography

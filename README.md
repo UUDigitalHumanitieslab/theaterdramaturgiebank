@@ -24,7 +24,7 @@ Below is a breakdown of the function of each file in this repository:
 * `single-collection.php`: Template for displaying a single post with the 'Collection' category.
 * `single-person.php`: Template for displaying a single post with the 'Person' category.
 * `single-record.php`: Template for displaying a single post with the 'Record' category.
-* `style.css`: Custom CSS, generated through SaSS. Generated.
+* `style.css`: Custom CSS, generated through [SaSS](http://sass-lang.com/). Generated.
 * `style.scss`: Custom SCSS, will generate the CSS and the source mapping.
 
 ## Compiling with SaSS

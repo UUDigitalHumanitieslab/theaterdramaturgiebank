@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the page with the slug "authors".
+ * The template for displaying the page with the slug "persons".
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * Displays all posts of type 'record' in an alphabetical listing.
@@ -11,7 +11,7 @@ get_header(); ?>
 <?php get_template_part('parts/page-header-1col'); ?> 
 
 <h2>
-	Author index
+	Person index
 </h2>
 <div class="listing">
 	<ul>
@@ -40,7 +40,7 @@ get_header(); ?>
 			$current_first = $first;
 		}
 		echo '<li>';
-		echo create_anchor('author', get_the_title());
+		echo create_anchor('person', get_the_title());
 		echo '</li>';
 
 		?>

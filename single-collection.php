@@ -70,7 +70,7 @@ get_header(); ?>
 				</div>
 			</section><?php // end article section ?>
 			<footer class="article-footer">
-			</footer><?php // end article footer ?>=
+			</footer><?php // end article footer ?>
 		</article><?php // end article ?>
 	
 	<?php endwhile; ?>

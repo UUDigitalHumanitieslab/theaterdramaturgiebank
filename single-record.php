@@ -134,7 +134,10 @@ get_header(); ?>
 
 		<script>
 			// Hide the additional content until the "more"-button is clicked.
-			jQuery(function() {
+			// Note that this uses window.load instead of document.ready, 
+			// otherwise embedded videos won't be loaded before the div is hidden.
+			// See: https://stackoverflow.com/a/545005/3710392
+			jQuery(window).on("load", function() {
 				jQuery("#record-more-content").hide();
 				jQuery("#record-more-button").click(function() {
 					jQuery("#record-more-content").show();

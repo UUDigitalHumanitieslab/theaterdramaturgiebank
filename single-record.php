@@ -50,9 +50,9 @@ get_header(); ?>
 
 						<!-- Bibliography (if available) -->
 						<?php if (get_field('bibliography')) { ?>
-							<h2>
+							<h3>
 								Bibliography
-							</h2>
+							</h3>
 							<p>
 								<?php var_dump(the_field('bibliography')); ?>
 							</p>

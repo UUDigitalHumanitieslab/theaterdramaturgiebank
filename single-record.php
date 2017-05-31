@@ -54,7 +54,7 @@ get_header(); ?>
 								Bibliography
 							</h3>
 							<p>
-								<?php var_dump(the_field('bibliography')); ?>
+								<?php the_field('bibliography'); ?>
 							</p>
 						<?php } ?>
 					</div>

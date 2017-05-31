@@ -26,7 +26,11 @@ h3 {
 
 p {
   font-size: 14px;
-  line-height: normal; }
+  line-height: normal;
+  text-align: justify; }
+
+#record-excerpt p {
+  font-size: 16px; }
 
 /**
  * Overriding the defaults for the home blog h2 using the settings above

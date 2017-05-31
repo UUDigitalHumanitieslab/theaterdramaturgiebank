@@ -27,7 +27,9 @@ get_header(); ?>
 						</h2>
 
 						<!-- Article content (excerpt + content) -->
-						<?php the_excerpt(); ?>
+						<div id="record-excerpt">
+							<?php the_excerpt(); ?>
+						</div>
 
 						<?php if (get_field('full-text')) { ?>
 							<button id="record-more-button" class="button icon">Read more</button>

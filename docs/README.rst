@@ -1,6 +1,6 @@
-==========================================
-TheaterDramaturgie.Bank user documentation
-==========================================
+================================================================
+Dramaturgy Database (TheaterDramaturgie.Bank) user documentation
+================================================================
 
 Introduction
 ============

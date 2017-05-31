@@ -1,6 +1,6 @@
 # TheaterDramaturgie.Bank
 
-This repository contains the code of the TheaterDramaturgie.Bank, located at http://theaterdramaturgiebank.sites.uu.nl/. 
+This repository contains the code of the Dramaturgy Database (also known as TheaterDramaturgie.Bank), located at http://theaterdramaturgiebank.sites.uu.nl/. 
 It's a [WordPress child theme](https://codex.wordpress.org/Child_Themes) of the [default Utrecht University theme](https://github.com/ictenmediaUU/UU2014).
 
 Below is a breakdown of the function of each file in this repository:

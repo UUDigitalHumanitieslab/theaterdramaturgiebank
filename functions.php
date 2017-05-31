@@ -5,7 +5,7 @@
  */
 
 // Sets the search page used throughout this child theme
-defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_sort=year_desc');
+defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_sort=year_desc&fwp_per_page=10');
 
 // Adds a child theme CSS file
 add_action('wp_enqueue_scripts', 'enqueue_child_theme_style', 30);
@@ -38,7 +38,7 @@ function my_save_post($post_id)
 add_action('save_post', 'my_save_post');
 
 /*********************/
-/* Facet WP
+/* Facet WP functions and hooks
 /*********************/
 
 // Display the ACF-fields with a link back to the search page
@@ -118,6 +118,11 @@ function my_facetwp_sort_options($options, $params)
 }
 
 add_filter('facetwp_sort_options', 'my_facetwp_sort_options', 10, 2);
+
+// Custom per page options
+add_filter('facetwp_per_page_options', function($options) {
+    return array(10, 25, 50);
+});
 
 /*********************/
 /* WP All Import

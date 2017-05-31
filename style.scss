@@ -173,8 +173,18 @@ p {
 	}
 }
 
-.facetwp-sort {
+/**
+ * Display the sort and per page options div inline
+ */
+.facetwp-sort, .facetwp-per-page {
 	display: inline;
+}
+
+/**
+ * Small width for per page option select box
+ */
+.facetwp-per-page-select {
+	width: 40px;
 }
 
 /**

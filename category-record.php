@@ -35,7 +35,10 @@ get_header(); ?>
 					<div class="col-sm-4">
 						Sort by <?php echo facetwp_display('sort'); // FacetWP sort ?>
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-4">
+						Show <?php echo facetwp_display('per_page'); // FacetWP results per page ?> entries
+					</div>
+					<div class="col-sm-4">
 						<?php echo facetwp_display('pager'); // FacetWP pager/pagination ?>
 					</div>
 				</div>

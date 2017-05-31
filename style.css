@@ -54,8 +54,10 @@ p {
 /**
  * Specifics for record table:
  * - Smaller font size and no top margin
- * - Showing the table labels on the left by default 
+ * - Grey background for odd rows
+ * - Somewhat bigger header font size and left alignment
  * - No list styling
+ * - No underline for links
  */
 #records {
   font-size: 14px;
@@ -127,8 +129,14 @@ p {
 .facetwp-pager .facetwp-pager-label {
   display: none; }
 
-.facetwp-sort {
+/**
+ * Display the sort and per page options div inline
+ */
+.facetwp-sort, .facetwp-per-page {
   display: inline; }
+
+.facetwp-per-page-select {
+  width: 40px; }
 
 /**
  * Smaller font size for facets, normal line-height and less margin

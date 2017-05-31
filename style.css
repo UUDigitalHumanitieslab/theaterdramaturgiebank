@@ -135,6 +135,9 @@ p {
 .facetwp-sort, .facetwp-per-page {
   display: inline; }
 
+/**
+ * Small width for per page option select box
+ */
 .facetwp-per-page-select {
   width: 40px; }
 
@@ -144,20 +147,18 @@ p {
 .facetwp-facet {
   font-size: 14px;
   line-height: normal;
-  margin-bottom: 10px !important; }
-
-/**
- * Smaller inputs for number range facets
- */
-.facetwp-type-number_range input {
-  width: 70px;
-  margin: 0px 5px 0px 10px; }
-
-/**
- * Toggles in italic
- */
-.facetwp-toggle {
-  font-style: italic; }
+  margin-bottom: 10px !important;
+  /**
+   * Toggles in italic
+   */
+  /**
+   * Smaller inputs for number range facets
+   */ }
+  .facetwp-facet .facetwp-toggle {
+    font-style: italic; }
+  .facetwp-facet.facetwp-type-number_range .facetwp-number {
+    width: 50px;
+    margin: 0px 5px 0px 10px; }
 
 /**
  * Alphabetical listing page styling: 3 columns, no bullets

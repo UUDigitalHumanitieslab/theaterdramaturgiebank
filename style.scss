@@ -194,21 +194,23 @@ p {
 	font-size: 14px;
 	line-height: normal;
 	margin-bottom: 10px !important;
-}
 
-/**
- * Smaller inputs for number range facets
- */
-.facetwp-type-number_range input {
-	width: 70px;
-	margin: 0px 5px 0px 10px;
-}
+	/**
+	 * Toggles in italic
+	 */
+	.facetwp-toggle {
+		font-style: italic;
+	}
 
-/**
- * Toggles in italic
- */ 
-.facetwp-toggle {
-	font-style: italic;
+	/**
+	 * Smaller inputs for number range facets
+	 */
+	&.facetwp-type-number_range {
+		.facetwp-number {
+			width: 50px;
+			margin: 0px 5px 0px 10px;
+		}
+	}
 }
 
 /**

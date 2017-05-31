@@ -41,20 +41,20 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="col-sm-3 record-sidebar">
-				<a class="record-header">Search</a>
+				<a class="record-header">(New) Search</a>
 				<?php echo facetwp_display('facet', 'search'); ?>
-				<a class="record-header">Keywords</a>
-				<?php echo facetwp_display('facet', 'keywords'); ?>
-				<a class="record-header">People</a>
+				<a class="record-header">Authors</a>
+				<?php echo facetwp_display('facet', 'author'); ?>
+				<a class="record-header">Persons</a>
 				<?php echo facetwp_display('facet', 'person'); ?>
 				<a class="record-header">Performances</a>
 				<?php echo facetwp_display('facet', 'performance'); ?>
+				<a class="record-header">Keywords</a>
+				<?php echo facetwp_display('facet', 'keywords'); ?>
 				<a class="record-header">Type</a>
 				<?php echo facetwp_display('facet', 'type'); ?>
 				<a class="record-header">Has full-text?</a>
 				<?php echo facetwp_display('facet', 'full-text'); ?>
-				<a class="record-header">Author</a>
-				<?php echo facetwp_display('facet', 'author'); ?>
 				<a class="record-header">Year</a>
 				<?php echo facetwp_display('facet', 'year'); ?>
 				<a class="record-header">Language</a>

@@ -113,6 +113,7 @@ function my_facetwp_sort_options($options, $params)
 	$options['default']['query_args'] = $options['year_desc']['query_args'];
 	unset($options['date_desc']);
 	unset($options['date_asc']);
+	unset($options['title_desc']);
 	return $options;
 }
 

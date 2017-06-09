@@ -29,6 +29,7 @@ p, ol, ul {
   line-height: normal; }
 
 #record-excerpt p {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
 /**

@@ -31,24 +31,26 @@ get_header(); ?>
 							<?php the_excerpt(); ?>
 						</div>
 
+						<div id="record-buttons">
+							<!-- More/less button (if full-text is available) -->
+							<?php if (get_field('full-text')) { ?>
+								<button id="record-more-button" class="button icon">Read more</button>
+								<button id="record-less-button" class="button icon">Hide text</button>
+							<?php } ?>
+
+							<!-- Download (if available) -->
+							<?php if (get_field('file')) { ?>
+								<a href="<?php echo get_field('file')['url']; ?>" target="_blank" class="button icon">
+									Download
+								</a>
+							<?php } ?>
+						</div>
+
+						<!-- Full-text (if available) -->
 						<?php if (get_field('full-text')) { ?>
-							<button id="record-more-button" class="button icon">Read more</button>
-							<button id="record-less-button" class="button icon">Hide text</button>
 							<div id="record-more-content">
 								<?php the_content(); ?>
 							</div>
-						<?php } ?>
-
-						<!-- Download (if available) -->
-						<?php if (get_field('file')) { ?>
-							<h2>
-								Original document
-							</h2>
-							<p>
-								<a href="<?php echo get_field('file')['url']; ?>" target="_blank">
-									<?php echo get_field('file')['filename']; ?>
-								</a>
-							</p>
 						<?php } ?>
 
 						<!-- Bibliography (if available) -->

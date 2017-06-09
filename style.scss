@@ -137,8 +137,15 @@ p, ol, ul {
 	}
 }
 
-#record-less-button {
-	display: none;
+/**
+ * Small margin below buttons and not displaying the less-button upfront
+ */
+#record-buttons {
+	margin-bottom: 1em;
+
+	#record-less-button {
+		display: none;
+	}
 }
 
 /**

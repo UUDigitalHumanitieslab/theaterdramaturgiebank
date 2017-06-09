@@ -102,8 +102,13 @@ p, ol, ul {
     .record-sidebar .record-content a {
       text-decoration: none; }
 
-#record-less-button {
-  display: none; }
+/**
+ * Small margin below buttons and not displaying the less-button upfront
+ */
+#record-buttons {
+  margin-bottom: 1em; }
+  #record-buttons #record-less-button {
+    display: none; }
 
 /**
  * Mimicking the UU-pager behavior:

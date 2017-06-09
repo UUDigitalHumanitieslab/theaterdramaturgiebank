@@ -102,6 +102,9 @@ p, ol, ul {
     .record-sidebar .record-content a {
       text-decoration: none; }
 
+#record-less-button {
+  display: none; }
+
 /**
  * Mimicking the UU-pager behavior:
  * - Display pagination as blocks

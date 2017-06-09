@@ -33,6 +33,7 @@ get_header(); ?>
 
 						<?php if (get_field('full-text')) { ?>
 							<button id="record-more-button" class="button icon">Read more</button>
+							<button id="record-less-button" class="button icon">Hide text</button>
 							<div id="record-more-content">
 								<?php the_content(); ?>
 							</div>
@@ -141,6 +142,12 @@ get_header(); ?>
 				jQuery("#record-more-content").hide();
 				jQuery("#record-more-button").click(function() {
 					jQuery("#record-more-content").show();
+					jQuery("#record-less-button").show();
+					jQuery(this).hide();
+				});
+				jQuery("#record-less-button").click(function() {
+					jQuery("#record-more-content").hide();
+					jQuery("#record-more-button").show();
 					jQuery(this).hide();
 				});
 			});

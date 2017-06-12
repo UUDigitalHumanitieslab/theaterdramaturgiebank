@@ -40,7 +40,7 @@ p, ol, ul {
 	line-height: normal;
 }
 
-#record-excerpt p {
+.excerpt p {
 	font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 }
@@ -140,10 +140,10 @@ p, ol, ul {
 /**
  * Small margin below buttons and not displaying the less-button upfront
  */
-#record-buttons {
+.buttons {
 	margin-bottom: 1em;
 
-	#record-less-button {
+	.less-button {
 		display: none;
 	}
 }

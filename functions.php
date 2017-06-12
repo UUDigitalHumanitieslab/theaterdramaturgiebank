@@ -7,13 +7,23 @@
 // Sets the search page used throughout this child theme
 defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_sort=year_desc&fwp_per_page=10');
 
-// Adds a child theme CSS file
-add_action('wp_enqueue_scripts', 'enqueue_child_theme_style', 30);
-
-function enqueue_child_theme_style() {
+// Adds child theme CSS files
+function enqueue_child_theme_styles()
+{
 	wp_register_style('theaterdramaturgiebank', get_stylesheet_uri(), array('uu2014-stylesheet'));
     wp_enqueue_style('theaterdramaturgiebank');
 }
+
+add_action('wp_enqueue_scripts', 'enqueue_child_theme_styles');
+
+// Adds child theme JavaScript files
+function enqueue_child_theme_scripts()
+{
+    wp_register_script('excerpts', get_stylesheet_directory_uri() . '/js/excerpts.js', array('jquery'));
+    wp_enqueue_script('excerpts');
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_child_theme_scripts');
 
 // Loads specific translations for this child theme
 load_theme_textdomain('uu2014-theaterdramaturgiebank', get_stylesheet_directory() . '/languages');

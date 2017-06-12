@@ -19,8 +19,20 @@ get_header(); ?>
 					<h2>
 						<?php the_title(); ?>
 					</h2>
+
+					<!-- Article content (excerpt + content) -->
+					<div class="excerpt">
+						<?php the_excerpt(); ?>
+					</div>
+
+					<div class="buttons">
+						<button class="more-button button icon">Read more</button>
+						<button class="less-button button icon">Hide text</button>
+					</div>
 					
-					<?php the_content(); ?>
+					<div class="more-content">
+						<?php the_content(); ?>
+					</div>
 
 					<h3>
 						Linked records

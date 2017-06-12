@@ -27,15 +27,15 @@ get_header(); ?>
 						</h2>
 
 						<!-- Article content (excerpt + content) -->
-						<div id="record-excerpt">
+						<div class="excerpt">
 							<?php the_excerpt(); ?>
 						</div>
 
-						<div id="record-buttons">
+						<div class="buttons">
 							<!-- More/less button (if full-text is available) -->
 							<?php if (get_field('full-text')) { ?>
-								<button id="record-more-button" class="button icon">Read more</button>
-								<button id="record-less-button" class="button icon">Hide text</button>
+								<button class="more-button button icon">Read more</button>
+								<button class="less-button button icon">Hide text</button>
 							<?php } ?>
 
 							<!-- Download (if available) -->
@@ -48,7 +48,7 @@ get_header(); ?>
 
 						<!-- Full-text (if available) -->
 						<?php if (get_field('full-text')) { ?>
-							<div id="record-more-content">
+							<div class="more-content">
 								<?php the_content(); ?>
 							</div>
 						<?php } ?>
@@ -134,26 +134,6 @@ get_header(); ?>
 			<footer class="article-footer">
 			</footer><?php // end article footer ?>
 		</article><?php // end article ?>
-
-		<script>
-			// Hide the additional content until the "more"-button is clicked.
-			// Note that this uses window.load instead of document.ready, 
-			// otherwise embedded videos won't be loaded before the div is hidden.
-			// See: https://stackoverflow.com/a/545005/3710392
-			jQuery(window).on("load", function() {
-				jQuery("#record-more-content").hide();
-				jQuery("#record-more-button").click(function() {
-					jQuery("#record-more-content").show();
-					jQuery("#record-less-button").show();
-					jQuery(this).hide();
-				});
-				jQuery("#record-less-button").click(function() {
-					jQuery("#record-more-content").hide();
-					jQuery("#record-more-button").show();
-					jQuery(this).hide();
-				});
-			});
-		</script>
 	
 	<?php endwhile; ?>
 	<?php else : ?>

@@ -47,6 +47,27 @@ function my_save_post($post_id)
 
 add_action('save_post', 'my_save_post');
 
+
+// Find posts with category record and having collection the current collection, and order by name
+function collection_linked_records($post_id) {
+	$args = array(
+		'post_type'			=> 'post',
+		'category_name'		=> 'record',
+		'meta_query'		=> array(
+			array(
+				'key'		=> 'collection',
+				'value'		=> $post_id,
+				'compare'	=> '=',
+			)
+		),
+		'meta_key'			=> 'year',
+		'orderby'			=> 'meta_value',
+		'posts_per_page'	=>	'-1',
+	);
+
+	return new WP_Query($args);
+}
+
 /*********************/
 /* Facet WP functions and hooks
 /*********************/

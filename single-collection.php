@@ -39,26 +39,9 @@ get_header(); ?>
 					</h3>
 
 					<?php
-					// Find posts with category record and having collection the current collection, and order by name
-					$args = array(
-						'post_type'			=> 'post',
-						'category_name'		=> 'record',
-						'meta_query'		=> array(
-							array(
-								'key'		=> 'collection',
-								'value'		=> get_the_id(),
-								'compare'	=> '=',
-							)
-						),
-						'meta_key'			=> 'year',
-						'orderby'			=> 'meta_value',
-						'posts_per_page'	=>	'-1',
-					);
-					$q = new WP_Query($args);
-
+						$q = collection_linked_records(get_the_id());
+						if ($q->have_posts()) :
 					?>
-
-					<?php if ($q->have_posts()) : ?>
 						<!-- TODO: can we maybe refactor this? -->
 
 						<table id="records" class="table table-striped">

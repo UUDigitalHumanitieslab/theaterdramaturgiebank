@@ -101,7 +101,11 @@ If you would like to add videos to a post, you can use the *embed shortcode* for
 Editing other content
 =====================
 
-About page in menu 
+About text on landing page
+--------------------------
+You can edit the lead text on the home page by navigating to *Pages* and then clicking the page titled *About - Home*.
+
+About page in menu
 ------------------
 You can edit the about page from the menu by navigating to *Pages* and then clicking the page titled *About*.
  
@@ -109,6 +113,6 @@ Contact page in menu
 --------------------
 You can edit the contact page from the menu by navigating to *Pages* and then clicking the page titled *Contact*.
 
-Martijn van der Klis, `Digital Humanities Lab`_, 18 January 2017.
+Martijn van der Klis, `Digital Humanities Lab`_, 12 June 2017.
 
 .. _`Digital Humanities Lab`: http://dig.hum.uu.nl/

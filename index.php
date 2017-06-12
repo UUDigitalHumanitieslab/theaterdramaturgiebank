@@ -14,10 +14,13 @@ get_header(); ?>
 			
 			<div id="home_search" class="col-sm-6">
 				<h2>Search the database</h2>
-				<p>
-					You can search the database for full-text interviews, annotated titles, using the free search field below,
-					or <a href="<?php echo SEARCH_PAGE; ?>">start with an empty search query</a>.
-				</p>
+
+				<?php
+					// Include the content from the page with the slug 'about-home'
+					$page = get_page_by_path('about-home');
+  					echo apply_filters('the_content', $page->post_content);
+  				?>
+
 				<div id="home_search_form">
 					<form method="get" action="<?php echo SEARCH_PAGE; ?>">
 						<input type="hidden" name="fwp_sort" value="year_desc"> <!-- necessary to keep default sort order -->

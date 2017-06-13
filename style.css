@@ -241,12 +241,20 @@ p, ol, ul {
   fill: #ffcd00 !important; }
 
 /**
- * Give colophon grey background, no padding for footer image
+ * Give colophon a static position and grey background, no padding for footer image
  */
 #colophon {
+  height: 100px;
+  margin: 0 auto;
   background-color: #bbbbbb;
-  padding: 14px; }
+  padding: 20px; }
   #colophon .footer-img {
     padding: 0px; }
+
+/** 
+ * Adds a bottom to the bottom so that the colophon won't flow over
+ */
+body {
+  margin-bottom: 100px; }
 
 /*# sourceMappingURL=style.css.map */

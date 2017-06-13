@@ -18,7 +18,7 @@ if (is_active_sidebar('colofon')) :
 
 <?php else : ?>
 
-<footer id="colophon" class="footer hidden-print" role="contentinfo">
+<footer id="colophon" class="footer hidden-print navbar-fixed-bottom" role="contentinfo">
 	<div id="inner-footer" class="container clearfix">
 		<div class="row">
 			<div class="col-sm-9">

@@ -19,5 +19,5 @@
 		</ul>
 	</td>
 	<td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
-	<td><a href="<?php the_permalink(); ?>"><?php the_field('year'); ?></a></td>
+	<td><a href="<?php the_permalink(); ?>"><?php the_field('year'); echo year_uncertain(); ?></a></td>
 </tr>

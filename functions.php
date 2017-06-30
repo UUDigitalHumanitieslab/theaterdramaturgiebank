@@ -108,12 +108,17 @@ function create_repeater_anchor($field, $value)
 	return implode(', ', $anchors);
 }
 
+function year_uncertain()
+{
+	return get_field('year_uncertain') ? '?' : '';
+}
+
 // Display the link back for years using the min-max notation
 function create_year_anchor($field, $value)
 {
 	$link = SEARCH_PAGE;
 	$link .= '&fwp_' . $field . '=' . $value . '%2C ' . $value;
-	return '<a href="' . $link . '">' . $value . '</a>';
+	return '<a href="' . $link . '">' . $value . '</a>' . year_uncertain();
 }
 
 // For collections, display a link to the individual post

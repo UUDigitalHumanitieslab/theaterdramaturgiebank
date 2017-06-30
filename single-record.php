@@ -73,7 +73,7 @@ get_header(); ?>
 								$value = $field['value'];
 
 								// Don't display fields without a value, or fields that are displayed/used elsewhere
-								if (!$value || in_array($title, array('key', 'bibliography', 'full-text', 'file')))
+								if (!$value || in_array($title, array('key', 'year_uncertain', 'bibliography', 'full-text', 'file')))
 								{
 									continue;
 								}

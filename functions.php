@@ -168,4 +168,35 @@ function markdown_to_html($str)
 	return $Parsedown->text($str);
 }
 
-?>
+/*********************/
+/* Single usage scripts
+/*********************/
+
+//add_action('after_setup_theme', 'set_type_miscellaneous');
+
+// Sets the 'type' ACF field to lowercase
+function set_type_lowercase()
+{
+	$posts = get_posts(array('post_type' => 'post', 'category_name' => 'record', 'numberposts' => -1));
+	foreach ($posts as $post)
+	{
+		$id = $post->ID;
+		$lower_type = strtolower(get_field('type', $id));
+
+		update_field('type', $lower_type, $id);
+	}
+}
+
+// Set the 'type' ACF field to 'YZ miscellaneous' if it's currently 'yz'
+function set_type_miscellaneous()
+{
+	$posts = get_posts(array('post_type' => 'post', 'category_name' => 'record', 'numberposts' => -1));
+	foreach ($posts as $post)
+	{
+		$id = $post->ID;
+		if (get_field('type', $id) == 'yz')
+		{
+			update_field('type', 'YZ miscellaneous', $id);
+		}
+	}
+}

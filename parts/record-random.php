@@ -12,8 +12,18 @@
 	</header>
 
 	<section class="entry-content clearfix">
-		<?php the_excerpt(); ?>
-		<?php echo '<a href="' . get_permalink($post->ID) . '" title="'. __('Read', 'uu2014') . get_the_title($post->ID).'" class="button icon" >'. __('Read more', 'uu2014') .'</a>'; ?>
+		<?php
+			if (has_post_thumbnail())
+			{
+				the_post_thumbnail('full');
+			}
+			else
+			{
+				the_excerpt();
+			}
+
+			echo '<a href="' . get_permalink($post->ID) . '" title="'. __('Read', 'uu2014') . get_the_title($post->ID).'" class="button icon" >'. __('Read more', 'uu2014') .'</a>';
+		?>
 	</section>
 
 	<footer class="article-footer"></footer>

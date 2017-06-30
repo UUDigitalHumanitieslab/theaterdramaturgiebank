@@ -30,11 +30,11 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<div class="col-sm-3">
+			<div class="col-sm-1">
 				<!-- White space -->
 			</div>
 
-			<div id="home_random" class="col-sm-3">
+			<div id="home_random" class="col-sm-5">
 				<h2>What's in?</h2>
 
 				<div>
@@ -45,6 +45,7 @@ get_header(); ?>
 						'category_name' 		=> 'record',
 						'posts_per_page'		=> 1,
 						'orderby' 				=> 'rand',
+						//'meta_query' 			=> array(array('key' => '_thumbnail_id')), // uncomment to only select posts with thumbnails.
 					);
 
 					$query = new WP_Query($q);

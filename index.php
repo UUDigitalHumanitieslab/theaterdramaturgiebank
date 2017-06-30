@@ -23,7 +23,6 @@ get_header(); ?>
 
 				<div id="home_search_form">
 					<form method="get" action="<?php echo SEARCH_PAGE; ?>">
-						<input type="hidden" name="fwp_sort" value="year_desc"> <!-- necessary to keep default sort order -->
 						<input type="hidden" name="fwp_per_page" value="10"> <!-- necessary to keep default amount of results per page -->
 						<input type="text" name="fwp_search" placeholder="Search the database" class="searchfield">
 						<input type="submit" id="searchsubmit" class="searchbutton" value="">

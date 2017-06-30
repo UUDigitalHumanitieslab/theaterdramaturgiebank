@@ -5,7 +5,7 @@
  */
 
 // Sets the search page used throughout this child theme
-defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_sort=year_desc&fwp_per_page=10');
+defined('SEARCH_PAGE') or define('SEARCH_PAGE', '/category/record/?fwp_per_page=10');
 
 // Adds child theme CSS files
 function enqueue_child_theme_styles()
@@ -146,7 +146,7 @@ function my_facetwp_sort_options($options, $params)
 			'order'		=> 'DESC',
 		)
 	);
-	$options['default']['query_args'] = $options['year_desc']['query_args'];
+	$options['default']['label'] = 'Relevance';
 	unset($options['date_desc']);
 	unset($options['date_asc']);
 	unset($options['title_desc']);

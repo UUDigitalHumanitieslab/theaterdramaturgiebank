@@ -65,9 +65,38 @@ get_header(); ?>
 					</div>
 					<div class="col-sm-3 record-sidebar">
 						<?php
+							// Display the link
+							function display_anchor($anchor)
+							{
+								echo '<a class="record-header">' . $anchor['label'] . '</a>';
+								echo '<p class="record-content">';
+								echo $anchor['anchor'];
+								echo '</p>';
+							}
+
+							// Display the keywords with a link back to the search page
+							function display_keywords()
+							{
+								$tags = get_the_terms($post->ID , 'post_tag');
+								if ($tags)
+								{
+									echo '<a class="record-header">Keywords</a>';
+									echo '<p class="record-content">';
+
+									$anchors = array();
+									foreach ($tags as $tag)
+									{
+										array_push($anchors, create_anchor('keywords', $tag->name));
+									}
+									echo implode(', ', $anchors);
+
+									echo '</p>';
+								}
+							}
+
 							// Display the custom fields, with a link back to the faceted search
+							$anchors = array();
 							$fields = get_field_objects();
-							ksort($fields);
 							foreach ($fields as $title => $field)
 							{
 								$value = $field['value'];
@@ -101,32 +130,20 @@ get_header(); ?>
 									$anchor = create_anchor($title, $value);
 								}
 
-								// Display the link
 								if ($anchor)
 								{
-									echo '<a class="record-header">' . $field['label'] . '</a>';
-									echo '<p class="record-content">';
-									echo $anchor;
-									echo '</p>';
+									$anchors[$title] = array('anchor' => $anchor, 'label' => $field['label']);
 								}
 							}
 
-							// Display the keywords with a link back to the search page
-							$tags = get_the_terms($post->ID , 'post_tag');
-							if ($tags)
-							{
-								echo '<a class="record-header">Keywords</a>';
-								echo '<p class="record-content">';
-
-								$anchors = array();
-								foreach ($tags as $tag)
-								{
-									array_push($anchors, create_anchor('keywords', $tag->name));
-								}
-								echo implode(', ', $anchors);
-
-								echo '</p>';
-							}
+							display_anchor($anchors['authors']);
+							display_anchor($anchors['collection']);
+							display_anchor($anchors['people']);
+							display_anchor($anchors['performances']);
+							display_keywords();
+							display_anchor($anchors['type']);
+							display_anchor($anchors['year']);
+							display_anchor($anchors['languages']);
 						?>
 					</div>
 				</div>

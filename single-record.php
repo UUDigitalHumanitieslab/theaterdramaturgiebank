@@ -31,6 +31,27 @@ get_header(); ?>
 							<?php the_excerpt(); ?>
 						</div>
 
+						<!-- Images (if available) -->
+						<?php if (have_rows('images')) { ?>
+							<div class="images">
+								<?php while (have_rows('images')) : the_row(); ?>
+									<img
+										src="<?php echo get_sub_field('image')['url']; ?>"
+										alt="<?php echo get_sub_field('image')['alt']; ?>"
+									/>
+								<?php endwhile; ?>
+							</div>
+						<?php } ?>
+
+						<!-- Videos (if available) -->
+						<?php if (have_rows('videos')) { ?>
+							<div class="videos">
+								<?php while (have_rows('videos')) : the_row(); ?>
+								<?php the_sub_field('video'); ?>
+								<?php endwhile; ?>
+							</div>
+						<?php } ?>
+
 						<div class="buttons">
 							<!-- More/less button (if full-text is available) -->
 							<?php if (get_field('full-text')) { ?>
@@ -102,7 +123,7 @@ get_header(); ?>
 								$value = $field['value'];
 
 								// Don't display fields without a value, or fields that are displayed/used elsewhere
-								if (!$value || in_array($title, array('key', 'year_uncertain', 'bibliography', 'full-text', 'file')))
+								if (!$value || in_array($title, array('key', 'year_uncertain', 'bibliography', 'full-text', 'file', 'images', 'videos')))
 								{
 									continue;
 								}

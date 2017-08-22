@@ -12,9 +12,8 @@ get_header(); ?>
 
 	<?php
 		// Order the collections by title, ascending. Preserve other query parameters.
-		global $wp_query;
-		$args = array_merge($wp_query->query_vars, array('orderby' => 'title', 'order' => 'ASC'));
-		query_posts($args);
+		global $query_string;
+		query_posts( $query_string . '&orderby=title&order=ASC' );
 	?>
 
 	<?php if (have_posts()) : ?>

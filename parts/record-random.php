@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 	<header class="article-header">
 		<h3 class="entry-header">
-			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>"><?php echo markdown_title(); ?></a>
 		</h3>
 	</header>
 

@@ -161,7 +161,7 @@ add_filter('facetwp_per_page_options', function($options) {
 });
 
 /*********************/
-/* WP All Import
+/* Markdown
 /*********************/
 
 require 'libraries/Parsedown.php';
@@ -169,8 +169,13 @@ require 'libraries/Parsedown.php';
 // Uses Parsedown to convert Markdown to HTML. See https://github.com/erusev/parsedown for details. Used in WP All Import.
 function markdown_to_html($str)
 {
-	$Parsedown = new Parsedown();
-	return $Parsedown->text($str);
+	return Parsedown::instance()->text($str);
+}
+
+// Uses Parsedown to convert Markdown in titles to HTML. Used for titles of Records.
+function markdown_title()
+{
+	return Parsedown::instance()->line(get_the_title());
 }
 
 /*********************/

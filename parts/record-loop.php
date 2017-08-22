@@ -18,6 +18,6 @@
 			?>
 		</ul>
 	</td>
-	<td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+	<td><a href="<?php the_permalink(); ?>"><?php echo markdown_title(); ?></a></td>
 	<td><a href="<?php the_permalink(); ?>"><?php the_field('year'); echo year_uncertain(); ?></a></td>
 </tr>

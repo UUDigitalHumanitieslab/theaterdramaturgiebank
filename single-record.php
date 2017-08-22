@@ -23,7 +23,7 @@ get_header(); ?>
 
 						<!-- Article title -->
 						<h2>
-							<?php the_title(); ?>
+							<?php echo markdown_title(); ?>
 						</h2>
 
 						<!-- Article content (excerpt + content) -->
